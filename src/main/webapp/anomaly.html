@@ -1,0 +1,323 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Index page of waves data vis">
+    <meta name="author" content="Yufan Zheng">
+
+    <title>Waves Vis</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/data-vis">Waves Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/observation.html">Observation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/flags.html">Flags</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/data-vis/anomaly.html">Anomalies</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!-- End of Navbar -->
+
+<!-- Main Content -->
+<main role="main">
+<div class="container-fluid" style="margin-top:56px">
+  <div class="row justify-content-between">
+  <!-- Left Side --> 
+  <div class="col-md-9">
+  <!-- Main Vis Panel -->
+  <div id="panel" style="margin-top:20px"></div>
+  <!-- End of Panel -->
+  <p style="padding:30px"></p>
+  <!-- Data Table -->
+  <table class="table" id="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Sector</th>
+        <th scope="col">Start Time</th>
+        <th scope="col">End Time</th>
+        <th scope="col">Weight</th>
+      </tr>
+    </thead>
+    <tbody style="max-height:400px;overflow:scroll">
+    </tbody>
+  </table> 
+  <!-- End of Table -->
+  </div> 
+  <!-- End of Left Side --> 
+  <!-- Right Side -->
+  <div class="col-md-3 hiddex-sm">
+    <!-- Sector Selector -->
+    <div class="card" style="width:100%; margin-top:30px" id="sectors">
+      <div class="card-header">
+        Sectors
+      </div>
+      <ul class="list-group list-group-flush" style="max-height:300px; overflow:scroll;">
+        <li class="list-group-item"><input type="checkbox" name="sector" value="Garches" checked/> Garches</li>
+        <li class="list-group-item"><input type="checkbox" name="sector" value="Louveciennes"> Louveciennes</li>
+        <li class="list-group-item"><input type="checkbox" name="sector" value="Brezin"> Brezin</li>
+      </ul>
+    </div>
+    <!-- End of Sector Selector -->
+    <p style="padding:20px"></p>
+    <button type="button" class="btn btn-info btn-lg btn-block" id="getAnomaly">Start Receiving Data</button>
+  </div>
+  <!-- End of Right Side -->
+  </div>
+</div>
+</main>
+<!-- End of Main Content -->
+
+<!-- Highchart js -->
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<!-- jQuery js -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<!-- popper js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<!-- bootstrap js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<script>
+
+// ---------------------------------
+// Global Variable:
+//   All Charts Dictionary
+//   sector_name -> chart mappings
+// ---------------------------------
+
+// - key:   sector Name (id of the chart panel)
+// - value: Corresponding chart
+var charts = {};
+    
+// ---------------------------------
+// Add / Remove Charts
+// ---------------------------------   
+    
+$(document).ready(function(){
+    // Append the default chart to panel
+    $('div#sectors :checkbox').each(function(){
+        if( $(this).prop('checked') ){
+            var sector = $(this).val();
+            var chart = createChart(sector);
+            charts[sector] = chart;
+        }
+    });
+});
+    
+$('div#sectors :checkbox').change(function(){
+    
+    var sector = $(this).val();
+    if( $(this).prop('checked') ){
+        var chart = createChart(sector);
+        charts[sector] = chart;
+    } else {
+        removeChart(sector);
+        delete charts[sector];
+    }
+
+});
+
+// ---------------------------------
+// Highchart Global Settings
+// ---------------------------------
+    
+Highcharts.setOptions({
+    global: {
+        useUTC: false
+    }
+});
+
+// ---------------------------------
+// Create a Chart
+// ---------------------------------
+
+// @Params:
+//   - name: name of the sector,
+//           the name will also be setted as the chart id
+// @Returns:
+//   - Created Chart Object
+function createChart(name){
+    
+    // Create the chart node
+    var $chartNode = $('<div></div>');
+    $chartNode.attr('id', name);
+    $('#panel').append($chartNode);
+    
+    // Init node with highcharts
+    var chart = Highcharts.stockChart(name, {
+        chart: {
+            events: {
+                load: function () {
+                    var series = this.series[0];
+                }
+            }
+        },
+        title: {
+            text: 'Anomaly Detection - ' + name
+        },
+        series: [{
+            name: name,
+            data: (function () {
+                // generate an array of 0 data for
+                var data = [],
+                    time = (new Date()).getTime(),
+                    i,
+                    j;
+                for (i = -999; i <= 0; i += 1) {
+                    data.push([
+                        time + i * 1000,
+                        0,
+                        1
+                    ]);
+                }
+                return data;
+            }())
+        }],
+        yAxis: {
+            title: {
+                text: 'Weights'
+            }
+        },
+        rangeSelector: {
+            buttons: [{
+                count: 1,
+                type: 'minute',
+                text: '1M'
+            }, {
+                count: 5,
+                type: 'minute',
+                text: '5M'
+            }, {
+                type: 'all',
+                text: 'All'
+            }],
+            inputEnabled: false,
+            selected: 0
+        }
+    });   
+    
+    return chart;
+}
+    
+function removeChart(name) {
+    $('#'+name).remove();
+}
+
+// ---------------------------------
+// Append a point to chart
+// ---------------------------------
+
+// @Params:
+//   - chart: chart to add point
+//   - y    : point's y axis
+function addPoint(chart, y){
+    var x = (new Date()).getTime();
+    chart.series[0].addPoint([x, y], true, true);
+}
+
+// ---------------------------------
+// Recieve Data From Back-End
+// ---------------------------------
+
+// When user click on button "Start Receiving Data"
+//  - 1. Get the formatted json data and parse it
+//  - 2. Fetch the sector and anomaly information
+//       Append the data to table below
+//  - 3. Add points for each chart
+//    - 3.1. If this sector has anomaly, append point with weight as y axis
+//    - 3.2. If no anomaly in this sector, append point with 0 as y axis
+//
+$("button#getAnomaly").click(function(e){
+    e.preventDefault();
+    
+    setInterval(function(){
+        // Every 1 second, send request to get the anomaly data
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/data-vis/webapi/anomaly", true);
+        xhr.onreadystatechange = (event) => {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+              
+              // Step 1: Parse json
+              var json = JSON.parse(xhr.responseText);
+              var head = json['head'];
+              var results = json['results'];
+              var bindings = results['bindings'];
+              
+              // Step 2: From bindings fetch anomalies
+              // sector -> weight mappings
+              var anomalies = {};
+              // From each data bindings result fetch data
+              for(var i = 0; i < bindings.length; i++){
+                var data = bindings[i];
+                // Get all 4 informations
+                var sector = data['sector']['value'].replace('http://waves-rsp.org/resource#', '');
+                var startTime = data['startTime']['value'];
+                var endTime = data['endTime']['value'];
+                var weight = data['weight']['value'];
+                // Set weight for sector
+                anomalies[sector] = weight;
+                // Append to table
+                appendToTable(sector, startTime, endTime, weight);
+              }
+              
+              // Step 3: Vis on charts 
+              // Iterate each sector chart to append new point
+              for(var sector in charts) {
+                // Get the chart for sector
+                var chart = charts[sector];
+                // If in this sector, we detect the anomaly
+                if(sector in anomalies){
+                  // Append a point with the weight value as y axis 
+                  var weight = anomalies[sector];
+                  addPoint(chart, parseFloat(weight));    
+                } else {
+                  // If no anomaly detected, append 0
+                  addPoint(chart, 0);
+                }
+              }
+          }
+        }
+        xhr.send();
+    }, 1000);
+    
+});
+    
+function appendToTable(sector, startTime, endTime, weight){
+    var $row = $(`
+      <tr>
+        <td>` + sector + `</td>
+        <td>` + startTime +`</td>
+        <td>` + endTime + `</td>
+        <td>` + weight + `</td>
+      </tr>
+    `);
+    $('table#table tbody').append($row);
+}
+    
+</script>
+
+</body>
+</html>

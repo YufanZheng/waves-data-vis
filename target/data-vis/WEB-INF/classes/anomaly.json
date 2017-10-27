@@ -1,0 +1,5 @@
+{ "head": { "link": [], "vars": ["sector", "startTime", "endTime", "weight"] },
+  "results": { "distinct": false, "ordered": true, "bindings": [
+    { "sector": { "type": "uri", "value": "http://waves-rsp.org/resource#Garches" }	, "startTime": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "2013-09-20 01:41:00" }	, "endTime": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "2013-09-20 01:50:00" }	, "weight": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#long", "value": "2" }},
+    { "sector": { "type": "uri", "value": "http://waves-rsp.org/resource#Louveciennes" }	, "startTime": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "2013-09-21 04:15:00" }	, "endTime": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "2013-09-21 04:15:00" }	, "weight": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#long", "value": "1" }} 
+] } }
