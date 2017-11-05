@@ -27,6 +27,22 @@ public class FlagsResource {
         return json;
     }
     
+	// ----------------------------------------
+	// TODO : Replace the function below
+	// ----------------------------------------
+    
+    @GET
+    @Path("streams")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getAllFlagsStreams() {
+    	
+    	// TODO: Replace with real time flags stream IDs
+    	
+    	String streamIds = getResourceFile("list-flags-streams.json");
+    	
+    	return streamIds;
+    }
+    
     /**
      * Method to be removed from this class once get the real time data
      * 		instead of fixed file data

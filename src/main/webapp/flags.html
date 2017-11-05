@@ -8,7 +8,7 @@
     <title>Waves Vis</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
 <body>
@@ -40,23 +40,288 @@
 </nav>
 <!-- End of Navbar -->
 
-<!-- Main Vis Panel -->
+<!-- Main Content -->
 <main role="main">
-<div class="container" style="margin-top:56px">
+<div class="container-fluid" style="margin-top:56px">
+<div class="row">
+<div class="col-sm-12">
+  <!-- Form to choose sensor's flags for vis -->
+  <form style="margin-top:25px"> 
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Choose a Sensor: </label>
+      <div class="col-sm-4">
+        <select class="form-control" id="sensors"></select>
+      </div>
+      <div class="col-sm-4">
+          <button class="btn btn-success" type="button" id="receiveFlags">Receive Flags Data</button>
+      </div>
+    </div>
+  </form>
+  <!-- End of form-->
+</div>
+</div><!-- end of row -->
+</div><!-- end of container -->
+
+<div class="container-fluid" style="background-color: #eee; padding-bottom:30px">
+<!-- Panels for Vis  -->
+<div id="panel">
+<br>
+<div class="row">
+  <div class="col-sm-8" id="obs_chart"></div>
+  <div class="col-sm-4" id="flag_1_chart"></div>
+</div>
+<br><br>
+<div class="row">
+  <div class="col-sm-4" id="flag_2_chart"></div>
+  <div class="col-sm-4" id="flag_3_chart"></div>
+  <div class="col-sm-4" id="flag_4_chart"></div>
+</div>
+</div>
+<!-- End of Panels-->
 </div>
 </main>
-<!-- End of Panel -->
-
-<!-- Highchart js -->
-<script src="https://code.highcharts.com/stock/highstock.js"></script>
-<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<!-- End of Main Content -->
 
 <!-- jQuery js -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <!-- popper js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="js/popper.min.js"></script>
 <!-- bootstrap js -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Highchart js -->
+<script src="js/highstock.min.js"></script>
+<script src="js/exporting.min.js"></script>
+
+<script>
+
+// ---------------------------------
+// Global Variable:
+//   charts:
+//     obs_chart
+//     flag_1_chart
+//     flag_2_chart
+//     flag_3_chart
+//     flag_4_chart
+//   sensors: 
+//     Arrays to save sensors related information
+// ---------------------------------
+
+var obs_chart    = createChart('obs_chart', 'Observation', '#563d7c');
+var flag_1_chart = createChart('flag_1_chart', 'Flag 1', '#f0ad4e');
+var flag_2_chart = createChart('flag_2_chart', 'Flag 2', '#0275d8');
+var flag_3_chart = createChart('flag_3_chart', 'Flag 3', '#d9534f');
+var flag_4_chart = createChart('flag_4_chart', 'Flag 4', '#5cb85c');
+
+//Sensors and location related information
+var sensors = [];           
+    
+// ---------------------------------
+// Get sensor related info
+// ---------------------------------
+$(document).ready(function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data-vis/webapi/context", true);
+    xhr.onreadystatechange = (event) => {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            // Step 1: Parse json
+            var json = JSON.parse(xhr.responseText);
+            var graphs = json['@graph'];
+            for (var i = 0; i < graphs.length; i++) {
+                var obj = graphs[i];
+                var type = obj['@type'];
+                if (type == 'http://purl.oclc.org/NET/ssnx/ssn#Sensor') {
+                    var name = obj['rdfs:label'];
+                    var latitude = obj['http://www.w3.org/2003/01/geo/wgs84_pos#lat']['@value'];
+                    var longitude = obj['http://www.w3.org/2003/01/geo/wgs84_pos#long']['@value'];
+                    var id = obj['@id'];
+                    var sensor = {}
+                    sensor['name'] = name;
+                    sensor['latitude'] = latitude;
+                    sensor['longitude'] = longitude;
+                    sensor['id'] = id;
+                    sensors.push(sensor);
+                }
+            }
+            for (var i = 0; i < sensors.length; i++) {
+                var id = sensors[i]['id'];
+                var name = sensors[i]['name'];
+                var $sensorOption = $('<option value="' + id + '">' + name + '</option>');
+                $('select#sensors').append($sensorOption);
+            }
+        }
+    }
+    xhr.send();
+});
+
+$("select#sensors").change(function(){
+    initAllCharts();
+});
+    
+function getSensorByName(name) {
+    for (var i = 0; i < sensors.length; i++) {
+        if (sensors[i]['name'] == name) {
+            return sensors[i];
+        }
+    }
+}
+
+function getSensorById(id) {
+    for (var i = 0; i < sensors.length; i++) {
+        if (sensors[i]['id'] == id) {
+            return sensors[i];
+        }
+    }
+}
+    
+function initAllCharts() {
+    // Empty all charts
+    obs_chart    = createChart('obs_chart', 'Observation', '#563d7c');
+    flag_1_chart = createChart('flag_1_chart', 'Flag 1', '#f0ad4e');
+    flag_2_chart = createChart('flag_2_chart', 'Flag 2', '#0275d8');
+    flag_3_chart = createChart('flag_3_chart', 'Flag 3', '#d9534f');
+    flag_4_chart = createChart('flag_4_chart', 'Flag 4', '#5cb85c');
+}
+    
+$("button#receiveFlags").click(function(){
+    setInterval(function(){
+        // Every 1 second, send request to get the flasg data
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/data-vis/webapi/flags", true);
+        xhr.onreadystatechange = (event) => {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                // Step 1: Parse json to get observation and flags data
+                var json = JSON.parse(xhr.responseText);
+                var sensorIdToVis = $("#sensors").val();
+                // console.log(sensorIdToVis);
+                var obs = 0.0, flag_1 = 0.0, flag_2 = 0.0, flag_3 = 0.0, flag_4 = 0.0;
+                // Iterate each data item
+                for(var i = 0; i < json.length; i++ ){
+                    var graph = json[i]['@graph'];
+                    var sensorId = graph[1]["ssn:isProducedBy"]["@id"].replace("waves:", "http://waves-rsp.org/resource#");
+                    if( sensorIdToVis == sensorId ){
+                        var data = graph[0];
+                        obs    = parseToNumeric( data["qudt:numericValue"]["@value"] );
+                        flag_1 = parseToNumeric( data["waves:flag1"] ); 
+                        flag_2 = parseToNumeric( data["waves:flag2"] ); 
+                        flag_3 = parseToNumeric( data["waves:flag3"] ); 
+                        flag_4 = parseToNumeric( data["waves:flag4"] ); 
+                    }
+                }
+                addPointToAllCharts(obs, flag_1, flag_2, flag_3, flag_4);
+                console.log("Sensor " + sensorIdToVis + " Obs: " + obs + " Flags: " + flag_1 + " " + flag_2 + " " + flag_3 + " " + flag_4);
+            }
+        };
+        xhr.send()
+    }, 1000);
+});
+
+function addPointToAllCharts(obs, flag_1, flag_2, flag_3, flag_4){
+    addPoint(obs_chart, obs);
+    addPoint(flag_1_chart, flag_1);
+    addPoint(flag_2_chart, flag_2);
+    addPoint(flag_3_chart, flag_3);
+    addPoint(flag_4_chart, flag_4);
+}    
+    
+function parseToNumeric(str){
+    if(str=='NaN'){
+        return 0.0;
+    }
+    if(str.endsWith('%')){
+        return parseFloat(str) / 100.0;
+    }
+    return parseFloat(str);
+}
+    
+// ---------------------------------
+// Append a point to chart
+// ---------------------------------
+
+// @Params:
+//   - chart: chart to add point
+//   - y    : point's y axis
+function addPoint(chart, y){
+    var x = (new Date()).getTime();
+    if( y != "NaN" ){
+        chart.series[0].addPoint([x, y], true, true);   
+    } else {
+        chart.series[0].addPoint([x, 0], true, true); 
+    }
+}
+ 
+//---------------------------------
+// Create a Chart
+//---------------------------------
+
+//@Params:
+// - id:    id of the div
+// - name:  name to be setted as the panel's label      
+//@Returns:
+// - Created Chart Object
+function createChart(id, name, color) {
+
+    // Init node with highcharts
+    var chart = Highcharts.stockChart(id, {
+        chart: {
+            events: {
+                load: function() {
+                    var series = this.series[0];
+                }
+            }
+        },
+        title: {
+            text: name
+        },
+        series: [{
+            name: name,
+            color: color,
+            data: (function() {
+                // generate an array of 0 data for
+                var data = [],
+                    time = (new Date()).getTime(),
+                    i,
+                    j;
+                for (i = -999; i <= 0; i += 1) {
+                    data.push([
+                        time + i * 1000,
+                        0,
+                        1
+                    ]);
+                }
+                return data;
+            }())
+        }],
+        yAxis: {
+            title: {
+                text: name
+            }
+        },
+        exporting: {
+            enabled: false
+        },
+        rangeSelector: {
+            buttons: [{
+                count: 1,
+                type: 'minute',
+                text: '1M'
+            }, {
+                count: 5,
+                type: 'minute',
+                text: '5M'
+            }, {
+                type: 'all',
+                text: 'All'
+            }],
+            inputEnabled: false,
+            selected: 0
+        }
+    });
+
+    return chart;
+}
+
+</script>
 
 </body>
 </html>

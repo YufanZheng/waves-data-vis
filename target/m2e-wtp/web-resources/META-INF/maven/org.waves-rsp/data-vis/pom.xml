@@ -4,9 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.waves-rsp</groupId>
+	  <parent>
+		<groupId>org.waves-rsp</groupId>
+		<artifactId>waves-parent</artifactId>
+		<version>0.2.0-SNAPSHOT</version>
+	  </parent>
     <artifactId>data-vis</artifactId>
     <packaging>war</packaging>
-    <version>0.0.1-SNAPSHOT</version>
     <name>data-vis</name>
 
     <build>

@@ -1,0 +1,2796 @@
+{
+  "events": [
+    {
+      "_id": {
+        "$oid": "59810104b6d99c064bf5df11"
+      },
+      "description": "Qui n’a jamais rêvé le temps de quelques minutes de se retrouver, à cheval, dans l’un des plus beaux et plus riches lieux de l’histoire de France ? \nEqui-Event vous propose de réaliser ce moment unique en vous emmenant le temps d’un samedi matin dans le Parc du Château de Versailles. \nAu départ de l'allée de Bailly, nous remontron l'allée pour rejoindre la grande place du grand Trianon, puis nous ferons le tour du domaine de Marie Antoinette pour ensuite galoper à proximité du grand canal avec le château face à nous. Puis profiterons de ces grandes allées chargées d’histoire.\n\nUne coupe de champagne clôturera cette belle matinée.\n\nDeux bonnes heures d’émotions garanties !\n\nCOSTUMES D'EPOQUES OBLIGATOIRE!!! \n\nTarif : 180€\n\nPossibilité de venir avec son propre cheval : 120€\n\nToutes les infos :   https://www.equievent.fr/cheval-chateau-versailles/",
+      "source": "Facebook",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "0"
+      },
+      "eventsKeyTerms": [
+        "l'allée",
+        "grande",
+        "temps",
+        "cheval",
+        "histoire",
+        "Château",
+        "l'allée de Bailly",
+        "l'allée pour rejoindre",
+        "grande place",
+        "puis"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501916400000
+      },
+      "end": {
+        "$date": 1501930800000
+      },
+      "location_text": "Versailles",
+      "sourceName": "",
+      "keyterms": [
+        "l'allée",
+        "grande",
+        "temps",
+        "cheval",
+        "histoire",
+        "Château",
+        "l'allée de Bailly",
+        "l'allée pour rejoindre",
+        "grande place",
+        "puis"
+      ],
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          2.1231706806266,
+          48.804085690442
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810117b6d99c064bf5e000"
+      },
+      "description": "Qui n’a jamais rêvé le temps de quelques minutes de se retrouver, à cheval, dans l’un des plus beaux et plus riches lieux de l’histoire de France ? \nEqui-Event vous propose de réaliser ce moment unique en vous emmenant le temps d’un samedi matin dans le Parc du Château de Versailles. \nAu départ de l'allée de Bailly, nous remontron l'allée pour rejoindre la grande place du grand Trianon, puis nous ferons le tour du domaine de Marie Antoinette pour ensuite galoper à proximité du grand canal avec le château face à nous. Puis profiterons de ces grandes allées chargées d’histoire.\n\nUne coupe de champagne clôturera cette belle matinée.\n\nDeux bonnes heures d’émotions garanties !\n\nCOSTUMES D'EPOQUES OBLIGATOIRE!!! \n\nTarif : 180€\n\nPossibilité de venir avec son propre cheval : 120€\n\nToutes les infos :   https://www.equievent.fr/cheval-chateau-versailles/",
+      "source": "Facebook",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "0"
+      },
+      "eventsKeyTerms": [
+        "l'allée",
+        "grande",
+        "temps",
+        "cheval",
+        "histoire",
+        "Château",
+        "l'allée de Bailly",
+        "l'allée pour rejoindre",
+        "grande place",
+        "puis"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501916400000
+      },
+      "end": {
+        "$date": 1501930800000
+      },
+      "location_text": "Versailles",
+      "sourceName": "",
+      "keyterms": [
+        "l'allée",
+        "grande",
+        "temps",
+        "cheval",
+        "histoire",
+        "Château",
+        "l'allée de Bailly",
+        "l'allée pour rejoindre",
+        "grande place",
+        "puis"
+      ],
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          2.1231706806266,
+          48.804085690442
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e027"
+      },
+      "description": "RT @PrinceJerundio: Mdr ce réseau est extraordinaire https://t.co/ZBVHX4Hfq0",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "1496335160"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626621000
+      },
+      "end": {
+        "$date": 1501626621000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Lauriiine_b",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e028"
+      },
+      "description": "RT @dvesean: George Harrison's \"Concert For Bangladesh\" (Rock's 1st benefit concert) today 1971, MSG, NYC...Eric Clapton was try… ",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "41194235"
+      },
+      "eventsKeyTerms": [
+        "Concert",
+        "1st",
+        "1st benefit",
+        "1st benefit concert",
+        "Harrison's"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626622000
+      },
+      "end": {
+        "$date": 1501626622000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Steigerworld",
+      "keyterms": [
+        "Concert",
+        "1st",
+        "1st benefit",
+        "1st benefit concert",
+        "Harrison's"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e034"
+      },
+      "description": "The Art at The Glen Festival is just a few days away - see you there! \n#Glenview #ArtAtTheGlen #FestivalSeason #Art https://t.co/XKxh6R6Z1l",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "2786251926"
+      },
+      "eventsKeyTerms": [
+        "The",
+        "The Art at",
+        "Art"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626622000
+      },
+      "end": {
+        "$date": 1501626622000
+      },
+      "location_text": "Versailles",
+      "sourceName": "TapestryGlenvw",
+      "keyterms": [
+        "The",
+        "The Art at",
+        "Art"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e035"
+      },
+      "description": "@Killian31b Gout du seum pcque jdeviens riche a souhait",
+      "source": "Twitter",
+      "score": 5,
+      "sourceId": {
+        "$numberLong": "702857218237067264"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626622000
+      },
+      "end": {
+        "$date": 1501626622000
+      },
+      "location_text": "Versailles",
+      "sourceName": "kleauhaies",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e036"
+      },
+      "description": "il y a eu un incendie dans mon village, pour une fois que c'est pas moi qui ai fait brûler la maison ahah",
+      "source": "Twitter",
+      "score": 5,
+      "sourceId": {
+        "$numberLong": "2469393194"
+      },
+      "eventsKeyTerms": [
+        "c'est"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626622000
+      },
+      "end": {
+        "$date": 1501626622000
+      },
+      "location_text": "Versailles",
+      "sourceName": "GabrielleLrd",
+      "keyterms": [
+        "c'est"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e037"
+      },
+      "description": "RT @ericbrownzzz: This is the art promoting an upcoming Gath Brooks concert in Atlanta https://t.co/mvC5AzPX0L",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "87607534"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626622000
+      },
+      "end": {
+        "$date": 1501626622000
+      },
+      "location_text": "Versailles",
+      "sourceName": "ChickSpinster",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e038"
+      },
+      "description": "E o festival que lá vai haver também",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "2647411939"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626622000
+      },
+      "end": {
+        "$date": 1501626622000
+      },
+      "location_text": "Versailles",
+      "sourceName": "jafostesara",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e039"
+      },
+      "description": "Colombia, Argentina, Chile, Bolivia, Nicaragua y México se presentarán en este Festival Folklórico, en #Morelia. https://t.co/8UmABiq5Bo",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "544423676"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626623000
+      },
+      "end": {
+        "$date": 1501626623000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Morelianas_",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e03a"
+      },
+      "description": "Tonight I'm going to the J. Cole concert alone, lol.\n\nBut if any of y'all are gonna be there, come find me.",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "30646857"
+      },
+      "eventsKeyTerms": [
+        "y'all",
+        "y'all are",
+        "going to the",
+        "going",
+        "going to",
+        "y'all are gonna",
+        "y'all are gonna be",
+        "I'm"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626623000
+      },
+      "end": {
+        "$date": 1501626623000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Jo_GotGame",
+      "keyterms": [
+        "y'all",
+        "y'all are",
+        "going to the",
+        "going",
+        "going to",
+        "y'all are gonna",
+        "y'all are gonna be",
+        "I'm"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e03b"
+      },
+      "description": "RT @Daddariaurel: Oe c trop bien après tu regardes les gouttes d'eau tomber t'essayes de voir laquelle va gagner la course jusqu'en b… ",
+      "source": "Twitter",
+      "score": 10,
+      "sourceId": {
+        "$numberLong": "1392073922"
+      },
+      "eventsKeyTerms": [
+        "d'eau",
+        "d'eau tomber",
+        "t'essayes de voir",
+        "t'essayes",
+        "jusqu'en"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626623000
+      },
+      "end": {
+        "$date": 1501626623000
+      },
+      "location_text": "Versailles",
+      "sourceName": "flavienbaudoin",
+      "keyterms": [
+        "d'eau",
+        "d'eau tomber",
+        "t'essayes de voir",
+        "t'essayes",
+        "jusqu'en"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e03c"
+      },
+      "description": "RT @100per_rps: [WEIBO] 170731 #백퍼센트 #100percent Official Update - a field full of PERFECTION rice wreaths at #PTA concert hall ❤️ https://…",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "3076530608"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626623000
+      },
+      "end": {
+        "$date": 1501626623000
+      },
+      "location_text": "Versailles",
+      "sourceName": "itzmiqn",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "59810119b6d99c064bf5e03d"
+      },
+      "description": "RT @sweetpark_0915: 170729 EVERYDAY6 concert in July HQ2P\nenjoy music life^_−☆@Jae_Day6 \n#데이식스 #DAY6 #제이 #Jae \n#EveryDAY6 https://t.co/K1v9…",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "720723104301977602"
+      },
+      "eventsKeyTerms": [
+        "EVERYDAY6"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626623000
+      },
+      "end": {
+        "$date": 1501626623000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Peanut_Dragibus",
+      "keyterms": [
+        "EVERYDAY6"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e03e"
+      },
+      "description": "RT @DumfriesShow: Great Taste winners @saucydesserts and @GallowaySoup are with us in the food festival marquee on Saturday. Congratulation…",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "21098156"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626623000
+      },
+      "end": {
+        "$date": 1501626623000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Loreburne",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e03f"
+      },
+      "description": "My shirt for the concert. He didn't see it cause he was too busy hugging me.🤗 but @AugustAlsina https://t.co/HLBO9J6544",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "2898620839"
+      },
+      "eventsKeyTerms": [
+        "see it cause",
+        "see it",
+        "see",
+        "He",
+        "see it cause he",
+        "didn't"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626623000
+      },
+      "end": {
+        "$date": 1501626623000
+      },
+      "location_text": "Versailles",
+      "sourceName": "ImjussBre_",
+      "keyterms": [
+        "see it cause",
+        "see it",
+        "see",
+        "He",
+        "see it cause he",
+        "didn't"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e040"
+      },
+      "description": "HARD Summer Festival Will Host Tribute to Prodigy of Mobb Deep https://t.co/x0ZbAVYwJ8",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "167781199"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": true,
+      "start": {
+        "$date": 1501626624000
+      },
+      "end": {
+        "$date": 1501626624000
+      },
+      "location_text": "Versailles",
+      "sourceName": "BenjaminEnfield",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e041"
+      },
+      "description": "Deux solitudes jusque dans la consommation d'alcool - https://t.co/SVYYUiic1L https://t.co/TcPwEGs0hl https://t.co/Fl1NdGlIEB",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "2831890735"
+      },
+      "eventsKeyTerms": [
+        "t.co/SVYYUiic1L",
+        "https",
+        "d'alcool"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626624000
+      },
+      "end": {
+        "$date": 1501626624000
+      },
+      "location_text": "Versailles",
+      "sourceName": "newsjsca",
+      "keyterms": [
+        "t.co/SVYYUiic1L",
+        "https",
+        "d'alcool"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e042"
+      },
+      "description": "Aquí está toda la información. Esta es la película que inaugurará el Festival Internacional de Cine de Toronto https://t.co/pwfvB44EOb",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "40115494"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626625000
+      },
+      "end": {
+        "$date": 1501626625000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Cinegarage",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e043"
+      },
+      "description": "@Mrs_QueenC @deDjandaL Ta de tres bon goût 😊 Moi si g un autre garçon un jour sa sera Ayden et si c une fille sa sera Aynine ou Maissa 😉",
+      "source": "Twitter",
+      "score": 5,
+      "sourceId": {
+        "$numberLong": "3650888957"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626625000
+      },
+      "end": {
+        "$date": 1501626625000
+      },
+      "location_text": "Versailles",
+      "sourceName": "PrincesseConsu",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e044"
+      },
+      "description": "RT @Mutine_: 🔴 COMPTE-RENDU du 30 Juillet: \n- 27 bouteilles d'eau distribuées\n- +1kg de pâtes distribué à\n21 sans-abris… ",
+      "source": "Twitter",
+      "score": 10,
+      "sourceId": {
+        "$numberLong": "2372225868"
+      },
+      "eventsKeyTerms": [
+        "d'eau",
+        "d'eau distribuées",
+        "distribuées"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626625000
+      },
+      "end": {
+        "$date": 1501626625000
+      },
+      "location_text": "Versailles",
+      "sourceName": "shameffy",
+      "keyterms": [
+        "d'eau",
+        "d'eau distribuées",
+        "distribuées"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e045"
+      },
+      "description": "Check out the free summer concert on the quad at #UNR Aug. 2 and Aug. 9 from 6 - 8 p.m. https://t.co/E86jDs6UCX",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "113457526"
+      },
+      "eventsKeyTerms": [
+        "the free summer concert",
+        "the",
+        "Aug"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626625000
+      },
+      "end": {
+        "$date": 1501626625000
+      },
+      "location_text": "Versailles",
+      "sourceName": "jointogetherNV",
+      "keyterms": [
+        "the free summer concert",
+        "the",
+        "Aug"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e046"
+      },
+      "description": "RT @5SOSFamsUnited: Friend: concert tickets or boyfriend? \n\n[clears throat] \n*whispers*\n\nMe: “concert tickets to see my boyfriend”",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "3302392092"
+      },
+      "eventsKeyTerms": [
+        "concert tickets",
+        "concert",
+        "tickets",
+        "boyfriend"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626625000
+      },
+      "end": {
+        "$date": 1501626625000
+      },
+      "location_text": "Versailles",
+      "sourceName": "shanxn_",
+      "keyterms": [
+        "concert tickets",
+        "concert",
+        "tickets",
+        "boyfriend"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e047"
+      },
+      "description": "Fitness Quote About Training : Run Disney Tinkerbell Half Marathon Training: Week 11 https://t.co/Mski4KP4B0 #body #Fitness #Inspiration https://t.co/InnfvqWw8X",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "863111580267016192"
+      },
+      "eventsKeyTerms": [
+        "Fitness",
+        "Training",
+        "https",
+        "t.co/Mski4KP4B0"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626626000
+      },
+      "end": {
+        "$date": 1501626626000
+      },
+      "location_text": "Versailles",
+      "sourceName": "FitnessViral",
+      "keyterms": [
+        "Fitness",
+        "Training",
+        "https",
+        "t.co/Mski4KP4B0"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e048"
+      },
+      "description": "➢➣➤▁▂▃▅▆▇▉ Best Real Massage ☚ ☛ (Grand Opening) ▇▆▅▃▂▁ https://t.co/qLv9osKAHq ph 817-757-5175 #Massage 9:00 - 21:00 #ChineseTraditional … https://t.co/iFu58lDgOL",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "3970923012"
+      },
+      "eventsKeyTerms": [
+        "t.co/qLv9osKAHq",
+        "Massage",
+        "https"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626626000
+      },
+      "end": {
+        "$date": 1501626626000
+      },
+      "location_text": "Versailles",
+      "sourceName": "massage_forest",
+      "keyterms": [
+        "t.co/qLv9osKAHq",
+        "Massage",
+        "https"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e049"
+      },
+      "description": "RT @pinknews: Frank Ocean made a brilliant statement with this anti-racist pro-LGBT t-shirt at Panorama Festival https://t.co/XpgPFPLNdt https://t.co/SFBKK1Twqd",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "17643749"
+      },
+      "eventsKeyTerms": [
+        "t.co/XpgPFPLNdt",
+        "https"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626626000
+      },
+      "end": {
+        "$date": 1501626626000
+      },
+      "location_text": "Versailles",
+      "sourceName": "crewislife",
+      "keyterms": [
+        "t.co/XpgPFPLNdt",
+        "https"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e04a"
+      },
+      "description": "🔖 10/08 Presentación GRAFOLOGÍA EN EL AMOR de @Grafocafe en Festival de las Letras de @liverpoolmexico Polanco. ¡Los esperamos! https://t.co/AvTQ59AQB9",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "217150480"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": true,
+      "start": {
+        "$date": 1501626624000
+      },
+      "end": {
+        "$date": 1501626624000
+      },
+      "location_text": "Versailles",
+      "sourceName": "megustaleermex",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e04b"
+      },
+      "description": "Me ha gustado un vídeo de @YouTube (https://t.co/CKRGtOCfX9 - Inauguración Festival del Folclor 2017 en Zacatecas).",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "830282781683023872"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626626000
+      },
+      "end": {
+        "$date": 1501626626000
+      },
+      "location_text": "Versailles",
+      "sourceName": "DanzaApb",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e04d"
+      },
+      "description": "Powell Street Festival continues to celebrate Japanese culture https://t.co/I4aKXQyNZ9 #Greece #news",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "613465688"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626627000
+      },
+      "end": {
+        "$date": 1501626627000
+      },
+      "location_text": "Versailles",
+      "sourceName": "GreeceOutsideIn",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e04e"
+      },
+      "description": "RT @mosdrashi: J'viens de croiser un mec qui m'a dit que les vêtements de couleur étaient pas fait pour les garçons 🤔 RT si je l'e… ",
+      "source": "Twitter",
+      "score": 5,
+      "sourceId": {
+        "$numberLong": "25821664"
+      },
+      "eventsKeyTerms": [
+        "m'a",
+        "RT",
+        "dit que les vêtements",
+        "dit"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626627000
+      },
+      "end": {
+        "$date": 1501626627000
+      },
+      "location_text": "Versailles",
+      "sourceName": "extermin_ate",
+      "keyterms": [
+        "m'a",
+        "RT",
+        "dit que les vêtements",
+        "dit"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e04f"
+      },
+      "description": "It's been too long since I've been to a country concert ☹️",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "801437604"
+      },
+      "eventsKeyTerms": [
+        "I've",
+        "I've been",
+        "been",
+        "I've been to",
+        "been too",
+        "been too long since",
+        "been too long"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626627000
+      },
+      "end": {
+        "$date": 1501626627000
+      },
+      "location_text": "Versailles",
+      "sourceName": "_ohmygodwin",
+      "keyterms": [
+        "I've",
+        "I've been",
+        "been",
+        "I've been to",
+        "been too",
+        "been too long since",
+        "been too long"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e050"
+      },
+      "description": "RT @FHWorldWide: The girls will be headlining the Chicago Anti-Violence Festival along with Macklemore and Ryan Lewis and more artis… ",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "59704195"
+      },
+      "eventsKeyTerms": [
+        "The girls will be headlining",
+        "The",
+        "and Ryan Lewis",
+        "and"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626627000
+      },
+      "end": {
+        "$date": 1501626627000
+      },
+      "location_text": "Versailles",
+      "sourceName": "lmjleader",
+      "keyterms": [
+        "The girls will be headlining",
+        "The",
+        "and Ryan Lewis",
+        "and"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e051"
+      },
+      "description": "RT @jerkxjollof: Last but not least, the African World Festival is FREE! So come through & enjoy a great time with us at the Generat… ",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "52138302"
+      },
+      "eventsKeyTerms": [
+        "the"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626627000
+      },
+      "end": {
+        "$date": 1501626627000
+      },
+      "location_text": "Versailles",
+      "sourceName": "vidasilencio",
+      "keyterms": [
+        "the"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e052"
+      },
+      "description": "RT @ELTIEMPO: Las espectaculares imágenes del festival mundial de pintura corporal https://t.co/NvQg09YyYr https://t.co/Grvz4AMQtE",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "592129412"
+      },
+      "eventsKeyTerms": [
+        "t.co/NvQg09YyYr",
+        "https"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626627000
+      },
+      "end": {
+        "$date": 1501626627000
+      },
+      "location_text": "Versailles",
+      "sourceName": "MarielaAlvear",
+      "keyterms": [
+        "t.co/NvQg09YyYr",
+        "https"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e053"
+      },
+      "description": "RT @VallyBeatz: On peut dire qu'elle a le feu au cul https://t.co/oRrvAH6G5a",
+      "source": "Twitter",
+      "score": 10,
+      "sourceId": {
+        "$numberLong": "1617796868"
+      },
+      "eventsKeyTerms": [
+        "feu"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626628000
+      },
+      "end": {
+        "$date": 1501626628000
+      },
+      "location_text": "Versailles",
+      "sourceName": "Alexouilles",
+      "keyterms": [
+        "feu"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e054"
+      },
+      "description": "RT @slutoIogy: I don't get people who will buy a $120 shirt from a concert or whatever but won't support their friend's art for $20",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "352462018"
+      },
+      "eventsKeyTerms": [
+        "support",
+        "don't",
+        "support their",
+        "art",
+        "art for",
+        "won't support their friend's",
+        "get",
+        "get people who will",
+        "get people",
+        "get people who"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626628000
+      },
+      "end": {
+        "$date": 1501626628000
+      },
+      "location_text": "Versailles",
+      "sourceName": "caseycampagnaa",
+      "keyterms": [
+        "support",
+        "don't",
+        "support their",
+        "art",
+        "art for",
+        "won't support their friend's",
+        "get",
+        "get people who will",
+        "get people",
+        "get people who"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e055"
+      },
+      "description": "Descubrí para Sentir \"Festival de Placeres\" 12 años de la seXpo en @qualityespacio 15/16 de set en #Cordoba de 19hs a 5am antic @TicketekAr https://t.co/N7uQNfhSyL",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "144310601"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626629000
+      },
+      "end": {
+        "$date": 1501626629000
+      },
+      "location_text": "Versailles",
+      "sourceName": "sexpoerotica",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e056"
+      },
+      "description": "RT @TaniaKessaouti: Pareil, depuis que j'ai commencé à boire de l'eau de Javel j'ai totalement arrêté l'alcool. https://t.co/2ThgodGGtA",
+      "source": "Twitter",
+      "score": 10,
+      "sourceId": {
+        "$numberLong": "2942245863"
+      },
+      "eventsKeyTerms": [
+        "l'eau",
+        "totalement arrêté",
+        "l'eau de Javel",
+        "totalement",
+        "l'alcool",
+        "commencé à boire",
+        "j'ai",
+        "commencé"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626629000
+      },
+      "end": {
+        "$date": 1501626629000
+      },
+      "location_text": "Versailles",
+      "sourceName": "spideynes",
+      "keyterms": [
+        "l'eau",
+        "totalement arrêté",
+        "l'eau de Javel",
+        "totalement",
+        "l'alcool",
+        "commencé à boire",
+        "j'ai",
+        "commencé"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e057"
+      },
+      "description": "RT @PokoraFRANCE: 🍀 Tentez de gagner:\n- 2 places de cinéma \n+ 1 affiche du concert #MyWayTour\nRdv sur le Facebook de @CGR_Events 👉🏼… ",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "1222016610"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626629000
+      },
+      "end": {
+        "$date": 1501626629000
+      },
+      "location_text": "Versailles",
+      "sourceName": "tarasorceliere",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e058"
+      },
+      "description": "@JonMuzza1 Round our way, you can get a proper Reservoir Style dogs job done for £200.",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "333633047"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626630000
+      },
+      "end": {
+        "$date": 1501626630000
+      },
+      "location_text": "Versailles",
+      "sourceName": "OddsWise",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e059"
+      },
+      "description": "RT @SavciSayan: Sayın RTE Ülke'yi,sayın KK koltuğu korumanın derdinde.Biri maraton koşucusu,diğeri salon. KK,Salon koşusunda da hep… ",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "2355239337"
+      },
+      "eventsKeyTerms": [
+        "Ülke'yi",
+        "Sayın",
+        "KK",
+        "salon"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626630000
+      },
+      "end": {
+        "$date": 1501626630000
+      },
+      "location_text": "Versailles",
+      "sourceName": "2015pers_",
+      "keyterms": [
+        "Ülke'yi",
+        "Sayın",
+        "KK",
+        "salon"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e05a"
+      },
+      "description": "So hey, chronic insomnia returned along with another visit from The Glums. (LOL like that ever leaves.) Only one thing for it: MCU Marathon.",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "2838238556"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626630000
+      },
+      "end": {
+        "$date": 1501626630000
+      },
+      "location_text": "Versailles",
+      "sourceName": "HongKongHermit",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e05b"
+      },
+      "description": "@ViolentPolicier @Florence1106 @Marlou_neR Punaise c'était trop rapide à mon goût !\nAdieu",
+      "source": "Twitter",
+      "score": 5,
+      "sourceId": {
+        "$numberLong": "837938643750772736"
+      },
+      "eventsKeyTerms": [
+        "rapide",
+        "c'était"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626630000
+      },
+      "end": {
+        "$date": 1501626630000
+      },
+      "location_text": "Versailles",
+      "sourceName": "CasseSpip",
+      "keyterms": [
+        "rapide",
+        "c'était"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e05c"
+      },
+      "description": "RT @surrealust: RT for a Rydellington bench proposal or like concert proposal",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "812609438175600640"
+      },
+      "eventsKeyTerms": [
+        "RT",
+        "proposal or like concert",
+        "proposal"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626631000
+      },
+      "end": {
+        "$date": 1501626631000
+      },
+      "location_text": "Versailles",
+      "sourceName": "greedyfiym",
+      "keyterms": [
+        "RT",
+        "proposal or like concert",
+        "proposal"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e05d"
+      },
+      "description": "RT @ThomasSanders: Had a private concert for myself today... 🎵 https://t.co/p05XDPFCMS",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "885620945016246276"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626631000
+      },
+      "end": {
+        "$date": 1501626631000
+      },
+      "location_text": "Versailles",
+      "sourceName": "ItJadaThomas",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e05e"
+      },
+      "description": "\"Live Live Live\"　\n～New Moon & Star Light Festival ～ \n「心ゆくまで野生に還る」\n五感を刺激する1000人規模野外生音楽祭\nhttps://t.co/ITQd0PY6N9",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "3061664912"
+      },
+      "eventsKeyTerms": [
+        "Live",
+        "Live Live"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626631000
+      },
+      "end": {
+        "$date": 1501626631000
+      },
+      "location_text": "Versailles",
+      "sourceName": "livelx3",
+      "keyterms": [
+        "Live",
+        "Live Live"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e05f"
+      },
+      "description": "El palmarés del 21th Bucheon International Fantastic Film Festival - Corea del Sur https://t.co/tKyLLG6C6T",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "303988168"
+      },
+      "eventsKeyTerms": [
+        "del"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626631000
+      },
+      "end": {
+        "$date": 1501626631000
+      },
+      "location_text": "Versailles",
+      "sourceName": "EMegafon",
+      "keyterms": [
+        "del"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e060"
+      },
+      "description": "►►► LA METEO DU JOUR AVEC NOOLAA Showers Température : 25°C -)°C Lever du soleil : August 01, 2017 at 05:47AM... https://t.co/ZY2s8MH7HR",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "600447177"
+      },
+      "eventsKeyTerms": [
+        
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626632000
+      },
+      "end": {
+        "$date": 1501626632000
+      },
+      "location_text": "Versailles",
+      "sourceName": "SLTestCom",
+      "keyterms": [
+        
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e061"
+      },
+      "description": "RT @Dupont_Damien: C'est fou. Bielsa à ses soldats mais gare si ca coince, aucun vieux pour éteindre le feu. https://t.co/th1tBynjZV",
+      "source": "Twitter",
+      "score": 10,
+      "sourceId": {
+        "$numberLong": "2434050476"
+      },
+      "eventsKeyTerms": [
+        "fou"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626633000
+      },
+      "end": {
+        "$date": 1501626633000
+      },
+      "location_text": "Versailles",
+      "sourceName": "dje_13013",
+      "keyterms": [
+        "fou"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5981011ab6d99c064bf5e062"
+      },
+      "description": "RT @r_likeit: 매년 8월이면 생각나는 네바다주의 버닝맨 페스티벌(Burning Man Festival). 세상 다시 없을 희한한 축제임엔 틀림없다. 일단 배경부터 골때림. 매년 8월, 네바다주 블랙록 사막에는 블랙록시티라… ",
+      "source": "Twitter",
+      "score": 1,
+      "sourceId": {
+        "$numberLong": "826556805018906625"
+      },
+      "eventsKeyTerms": [
+        "매년"
+      ],
+      "verified": false,
+      "start": {
+        "$date": 1501626633000
+      },
+      "end": {
+        "$date": 1501626633000
+      },
+      "location_text": "Versailles",
+      "sourceName": "usl_26",
+      "keyterms": [
+        "매년"
+      ],
+      "location": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.96944422049222,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.8781161065379
+            ],
+            [
+              2.22459235221894,
+              48.7374199768179
+            ],
+            [
+              1.96944422049222,
+              48.7374199768179
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

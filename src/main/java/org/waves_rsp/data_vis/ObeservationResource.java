@@ -7,6 +7,7 @@ import java.util.Scanner;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 @Path("observation")
@@ -16,22 +17,54 @@ public class ObeservationResource {
 	// TODO : Replace the function below
 	// ----------------------------------------
 	
-	// Every 1 second, the front-end will send a request to 
-	//		fetch current observation data
-	// Need to REPLACE the function below with the code 
-	//		to receive the real observation data
-	//
-	// NOTE:
-	//   The returned string must be in the same format as the dump-54.json file
-	//
-	
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getObsValue() throws IOException {
+    public String getObsValue(@QueryParam("id") String streamId) throws IOException {
     	
-    	String obsValue = getResourceFile("dump-54.json");
+    	// TODO: Replace the returned json string with real time data from request stream id
     	
-        return obsValue;
+    	System.out.println("The stream id is " + streamId);
+    	String json = getResourceFile("dump-54.json");
+    	
+        return json;
+    }
+    
+	// ----------------------------------------
+	// TODO : Replace the function below
+	// ----------------------------------------
+	
+    @GET
+    @Path("history")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getHistoryObsValue(@QueryParam("id")        String streamId,
+						    		 @QueryParam("startDate") String startDate,
+						    		 @QueryParam("endDate")   String endDate) throws IOException {
+    	
+    	// TODO: Replace the returned json string with history data
+    	
+    	System.out.println("The stream id is " + streamId);
+    	System.out.println("The startDate id is " + startDate);
+    	System.out.println("The endDate id is " + endDate);
+    	
+    	String json = getResourceFile("dump-54.json");
+    	
+        return json;
+    }
+    
+	// ----------------------------------------
+	// TODO : Replace the function below
+	// ----------------------------------------
+    
+    @GET
+    @Path("streams")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getAllObsStreams() {
+    	
+    	// TODO: Replace with real time observation stream IDs
+    	
+    	String streamIds = getResourceFile("list-obs-streams.json");
+    	
+    	return streamIds;
     }
 
     /**

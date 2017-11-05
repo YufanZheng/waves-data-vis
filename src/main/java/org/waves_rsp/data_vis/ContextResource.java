@@ -11,13 +11,13 @@ import javax.ws.rs.core.MediaType;
 
 @Path("context")
 public class ContextResource {
-	
-    // context.json is static sensor data, do NOT need to update it with real time data
-    // don't need to change the method below
     
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getContext() throws IOException {
+    	
+        // context.json is static sensor data, do NOT need to update it with real time data
+        // don't need to change the method below
     	
     	String context = getResourceFile("context.json");
     	

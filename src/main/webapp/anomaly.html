@@ -8,7 +8,7 @@
     <title>Waves Vis</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
 <body>
@@ -49,8 +49,8 @@
   <!-- Main Vis Panel -->
   <div id="panel" style="margin-top:20px"></div>
   <!-- End of Panel -->
-  <p style="padding:30px"></p>
   <!-- Data Table -->
+  <p class="text-center" style="padding:10px">Anomaly Table</p>
   <table class="table" id="table">
     <thead class="thead-light">
       <tr>
@@ -68,20 +68,18 @@
   <!-- End of Left Side --> 
   <!-- Right Side -->
   <div class="col-md-3 hiddex-sm">
+    <p style="padding:5px"></p>
+    <button type="button" class="btn btn-success btn-block" id="getAnomaly">Receiving Anomaly Data</button>
+    <p style="padding:5px"></p>
     <!-- Sector Selector -->
-    <div class="card" style="width:100%; margin-top:30px" id="sectors">
+    <div class="card" style="width:100%; margin-top:10px" id="sectors">
       <div class="card-header">
         Sectors
       </div>
-      <ul class="list-group list-group-flush" style="max-height:300px; overflow:scroll;">
-        <li class="list-group-item"><input type="checkbox" name="sector" value="Garches" checked/> Garches</li>
-        <li class="list-group-item"><input type="checkbox" name="sector" value="Louveciennes"> Louveciennes</li>
-        <li class="list-group-item"><input type="checkbox" name="sector" value="Brezin"> Brezin</li>
+      <ul class="list-group list-group-flush" style="max-height:630px; overflow:scroll;">
       </ul>
     </div>
     <!-- End of Sector Selector -->
-    <p style="padding:20px"></p>
-    <button type="button" class="btn btn-info btn-lg btn-block" id="getAnomaly">Start Receiving Data</button>
   </div>
   <!-- End of Right Side -->
   </div>
@@ -89,16 +87,16 @@
 </main>
 <!-- End of Main Content -->
 
-<!-- Highchart js -->
-<script src="https://code.highcharts.com/stock/highstock.js"></script>
-<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-
 <!-- jQuery js -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <!-- popper js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="js/popper.min.js"></script>
 <!-- bootstrap js -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Highchart js -->
+<script src="js/highstock.min.js"></script>
+<script src="js/exporting.min.js"></script>
 
 <script>
 
@@ -108,32 +106,109 @@
 //   sector_name -> chart mappings
 // ---------------------------------
 
-// - key:   sector Name (id of the chart panel)
+// - key  : Sector name :
+//          the name will be used asid of the chart panel
 // - value: Corresponding chart
 var charts = {};
+
+// List of sector names
+var sectors = [];
+    
+// Google Map Geocoder, used to find the latitude and longitude of sector
+var geocoder;
+    
+// Callback function of google map js api to init global variable geocoder
+function initGeocoder() {
+    geocoder = new google.maps.Geocoder();
+    getLocation("Nanterre Sud");
+}
+    
+function getLocation(sector){
+    var address = sector + " France";
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+            console.log(latitude, longitude);
+        } 
+    }); 
+}
+
+// ---------------------------------
+// Get all sectors
+// ---------------------------------   
+
+$(document).ready(function(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data-vis/webapi/context", true);
+    xhr.onreadystatechange = (event) => {
+      if (xhr.readyState == XMLHttpRequest.DONE) {
+          // Step 1: Parse json
+          var json = JSON.parse(xhr.responseText);
+          var graphs = json["@graph"];
+          // Fetch the list of sector names
+          for(var i = 0; i < graphs.length; i++){
+              var graph = graphs[i];
+              if( graph["@type"] == "http://purl.oclc.org/NET/ssnx/ssn#Platform" ){
+                  var sector = graph["rdfs:label"];
+                  sectors.push(sector);
+              }
+          }
+          // Step 2: Append list of sectors to right side selector
+          for(var i = 0; i < sectors.length; i++){
+              var sector = sectors[i];
+              var $newListItem = $('<li class="list-group-item"><input type="checkbox" name="sector" value="'+sector+'"> '+sector+'</li>');
+              $("#sectors ul").append($newListItem);
+          }
+          // Step 3: Show one chart to remedy the vacancy
+          var $firstSectorCheckbox = $("#sectors ul li input").first();
+          $firstSectorCheckbox.prop( "checked", true );
+          var sector = $firstSectorCheckbox.val();
+          var chart = createChart(sector);
+          charts[sector] = chart;
+      }
+    }
+    xhr.send();
+});
+    
+function parseLabelToAddress(label){
+    //
+    // Why need to parse sector label to address?
+    //
+    // For some sector name given in contect.json file, 
+    //   i.e. "SECTEUR 10 - Buzenval 3ème Elévation"
+    // If we give their name directly to google map api, 
+    //   it can not get the longitude and latitude
+    //
+    // This function is to parse the label to an address
+    //   that could be processed by google map api
+    //
+    if( label.startsWith("SECTEUR") ){
+        // "SECTEUR 01 - Villeneuve"              -> "Villeneuve"
+        // "SECTEUR 10 - Buzenval 3ème Elévation" -> "Buzenval 3ème Elévation"
+        label = label.split(" - ")[1];
+        if( label.endsWith("3ème Elévation") ){
+            // "Buzenval 3ème Elévation"    -> "Buzenval"
+            // "Mt Valérien 3éme Elevation" -> "Mt Valérien"
+            label = label.replace(" 3ème Elévation", "");
+        }
+    }
+    return label;
+}
     
 // ---------------------------------
 // Add / Remove Charts
 // ---------------------------------   
     
-$(document).ready(function(){
-    // Append the default chart to panel
-    $('div#sectors :checkbox').each(function(){
-        if( $(this).prop('checked') ){
-            var sector = $(this).val();
-            var chart = createChart(sector);
-            charts[sector] = chart;
-        }
-    });
-});
-    
-$('div#sectors :checkbox').change(function(){
-    
+$('div#sectors').on('change', ':checkbox', function(){
+    // When user select/de-seclect a sector to view
     var sector = $(this).val();
     if( $(this).prop('checked') ){
+        // Show the chart
         var chart = createChart(sector);
         charts[sector] = chart;
     } else {
+        // Remove the chart
         removeChart(sector);
         delete charts[sector];
     }
@@ -304,6 +379,10 @@ $("button#getAnomaly").click(function(e){
     }, 1000);
     
 });
+
+// ---------------------------------
+// Append Data to Table
+// ---------------------------------
     
 function appendToTable(sector, startTime, endTime, weight){
     var $row = $(`
@@ -318,6 +397,8 @@ function appendToTable(sector, startTime, endTime, weight){
 }
     
 </script>
-
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwoT7iVUJfFq0-owyD2nvK-m5dZ26FawY&callback=initGeocoder">
+</script>
 </body>
 </html>

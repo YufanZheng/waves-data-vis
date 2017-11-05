@@ -1,4 +1,0 @@
-{ "head": { "link": [], "vars": ["sector", "startTime", "endTime", "weight"] },
-  "results": { "distinct": false, "ordered": true, "bindings": [
- 
- ] } }

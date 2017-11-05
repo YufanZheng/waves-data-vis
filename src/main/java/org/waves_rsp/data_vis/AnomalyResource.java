@@ -7,6 +7,7 @@ import java.util.Scanner;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 @Path("anomaly")
@@ -19,35 +20,29 @@ public class AnomalyResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getAnomaly() throws IOException {
-    	
-    	// Every 1 second, the front-end will send a get request to this function
-    	//
-    	//  - if there is a detected anomaly:
-    	//      return the json string same format as anomaly.json
-    	//
-    	//  - if no anomaly
-    	//      return the json string same format as no_anomaly.json 
-    	//
+
     	// TODO: Replace the file string as the real anomaly result
-    	//
-    	// Important Note Here: the returned format must be the same as indicated in the file
-    	//
     	
     	String json = getResourceFile("anomaly.json");
-    	// String json = getAnomalyDataFromTs(new Date((TimeReference.millis));
     	
         return json;
     }
     
-    /**
-     * Method to be removed from this class once get the real time data
-     * 		instead of fixed file data
-     * 
-     * Get file in resource folder as string
-     * 
-     * @param filename: File name in the resources folder
-     * @return file string
-     */
+    @GET
+    @Path("explanation")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getExplanation(@QueryParam("startTime") String startTime,
+    							 @QueryParam("endTime")   String endTime,
+    							 @QueryParam("longitude") double longitude,
+    							 @QueryParam("latitude")  double latitude) throws IOException {
+
+    	// TODO: Replace the file string as the real anomaly result
+    	
+    	String json = getResourceFile("scouter-events.json");
+    	
+        return json;
+    }
+    
     private String getResourceFile(String filename) {
 
     	StringBuilder result = new StringBuilder("");

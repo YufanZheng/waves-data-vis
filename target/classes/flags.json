@@ -2,32 +2,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410196698097-1",
+            "@id":"_:_:bNE-1c1mm16bkg3lb1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"0.42"
+               "@value":"0.3"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2fg7ldd",
+            "@id":"S-1i:1c1mm16bzfho1",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410196698097-1"
+               "@id":"_:_:bNE-1c1mm16bkg3lb1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_250HP"
+               "@id":"waves:Q_250HP"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -36,304 +40,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410200892402-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"112.84"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2fiphpu",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410200892402-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_400G"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410200892403-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"91.5"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2fiphpv",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410200892403-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_400N"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410205086708-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"101.73"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2fl7e2c",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410205086708-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_400V"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410209281013-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"35.54"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2fnpaet",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410209281013-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_600-300"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410217669622-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"372.39"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2fsp33q",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410217669622-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_600-900"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410217669623-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"286.97"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2fsp33r",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410217669623-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_600HP"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410221863928-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"477.95"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2fv6zg8",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410221863928-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_700-650"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410230252537-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"604.34"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2g06s55",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410230252537-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_800-900"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410234446842-1",
+            "@id":"_:_:bNE-1c1mm16cgws371",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2g2oohm",
+            "@id":"S-1i:1c1mm16cye2if",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410234446842-1"
+               "@id":"_:_:bNE-1c1mm16cgws371"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_BE01"
+               "@id":"waves:Q_BE01"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -342,32 +78,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410238641147-1",
+            "@id":"_:_:bNE-1c1mm16did9a11",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"107.0"
+               "@value":"152.7"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2g56ku3",
+            "@id":"S-1i:1c1mm16ewb875",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410238641147-1"
+               "@id":"_:_:bNE-1c1mm16did9a11"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_BE04"
+               "@id":"waves:Q_400V"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -376,32 +116,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410247029756-1",
+            "@id":"_:_:bNE-1c1mm16duur0a1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"0.0"
+               "@value":"304.91"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2ga6dj0",
+            "@id":"S-1i:1c1mm16fv9t1k",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410247029756-1"
+               "@id":"_:_:bNE-1c1mm16duur0a1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DE02"
+               "@id":"waves:Q_600HP"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -410,100 +154,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410251224061-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"0.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2gco9vh",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410251224061-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DE03"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410255418366-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"242.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2gf667y",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410255418366-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DE05"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410259612671-1",
+            "@id":"_:_:bNE-1c1mm16e4uce31",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2gho2kf",
+            "@id":"S-1i:1c1mm16jc4qc1",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410259612671-1"
+               "@id":"_:_:bNE-1c1mm16e4uce31"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DE13"
+               "@id":"waves:Q_DE03"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -512,32 +192,112 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410268001280-1",
+            "@id":"_:_:bNE-1c1mm16ewb8741",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"74.32"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm16lmjdqw",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm16ewb8741"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_DT09"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm16hvov2k1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"7.91"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm16mbid7j",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm16hvov2k1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_DT01"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm16j4n1an1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2gmnv9c",
+            "@id":"S-1i:1c1mm16mqhraa",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410268001280-1"
+               "@id":"_:_:bNE-1c1mm16j4n1an1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT01"
+               "@id":"waves:Q_EG04-2"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -546,32 +306,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410272195585-1",
+            "@id":"_:_:bNE-1c1mm16i0onrh1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"26.69"
+               "@value":"116.94"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2gp5rlt",
+            "@id":"S-1i:1c1mm16n0hco4",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410272195585-1"
+               "@id":"_:_:bNE-1c1mm16i0onrh1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT02"
+               "@id":"waves:Q_400N"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -580,32 +344,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410276389890-1",
+            "@id":"_:_:bNE-1c1mm16hj7dcb1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"12.18"
+               "@value":"578.61"
             },
-            "qudt:unit":""
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
          },
          {
-            "@id":"S-1i:1bdc1m2grnnya",
+            "@id":"S-1i:1c1mm16nry8h3",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410276389890-1"
+               "@id":"_:_:bNE-1c1mm16hj7dcb1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT04"
+               "@id":"waves:Q_600-900"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -614,32 +382,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410293167107-1",
+            "@id":"_:_:bNE-1c1mm16ix5c9a1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"53.81"
+               "@value":"914.33"
             },
-            "qudt:unit":""
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
          },
          {
-            "@id":"S-1i:1bdc1m2h1n9c3",
+            "@id":"S-1i:1c1mm16ogx7xo",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410293167107-1"
+               "@id":"_:_:bNE-1c1mm16ix5c9a1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT09"
+               "@id":"waves:Q_800-900"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -648,32 +420,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410297361412-1",
+            "@id":"_:_:bNE-1c1mm16l2k6z91",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"0.0"
+               "@value":"90.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2h455ok",
+            "@id":"S-1i:1c1mm16p8e3qo",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410297361412-1"
+               "@id":"_:_:bNE-1c1mm16l2k6z91"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT10"
+               "@id":"waves:Q_EG01"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -682,32 +458,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410301555717-1",
+            "@id":"_:_:bNE-1c1mm16jjmfdf1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"0.0"
+               "@value":"4.77"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2h6n211",
+            "@id":"S-1i:1c1mm16pxd37b",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410301555717-1"
+               "@id":"_:_:bNE-1c1mm16jjmfdf1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT12"
+               "@id":"waves:Q_DT13"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -716,66 +496,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410305750022-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"10.47"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2h94ydi",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410305750022-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT13"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410309944327-1",
+            "@id":"_:_:bNE-1c1mm16lcjsd21",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2hbmupz",
+            "@id":"S-1i:1c1mm16q9ukxn",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410309944327-1"
+               "@id":"_:_:bNE-1c1mm16lcjsd21"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT17"
+               "@id":"waves:Q_DE02"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -784,32 +534,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410318332936-1",
+            "@id":"_:_:bNE-1c1mm16kskllg1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"70.06"
+               "@value":"296.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2hgmnew",
+            "@id":"S-1i:1c1mm16qju6bj",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410318332936-1"
+               "@id":"_:_:bNE-1c1mm16kskllg1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_DT18"
+               "@id":"waves:Q_Point_Triple"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -818,32 +572,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410326721545-1",
+            "@id":"_:_:bNE-1c1mm16nhyn3a1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"60.0"
+               "@value":"346.12"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2hlmg3t",
+            "@id":"S-1i:1c1mm16rgauti",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410326721545-1"
+               "@id":"_:_:bNE-1c1mm16nhyn3a1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_EG01"
+               "@id":"waves:QE_Garches"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -852,32 +610,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410335110154-1",
+            "@id":"_:_:bNE-1c1mm16nzfxig1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"0.0"
+               "@value":"13.41"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2hqm8sq",
+            "@id":"S-1i:1c1mm16s0a1l3",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410335110154-1"
+               "@id":"_:_:bNE-1c1mm16nzfxig1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_EG03"
+               "@id":"waves:Q_DT04"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -886,66 +648,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410339304459-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"0.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2ht4557",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410339304459-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_EG04-1"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410347693068-1",
+            "@id":"_:_:bNE-1c1mm16m40o621",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2hy3xu4",
+            "@id":"S-1i:1c1mm16sp911p",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410347693068-1"
+               "@id":"_:_:bNE-1c1mm16m40o621"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_EG04-2"
+               "@id":"waves:Q_DE13"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -954,304 +686,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410356081677-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"12.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2i33qj1",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410356081677-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_EG05"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410364470286-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"79.78"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2i83j7y",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410364470286-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#Q_EN01"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410368664591-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"0.6"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2ialfkf",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410368664591-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_Bache_Brezin"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410381247504-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"509.36"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2ii34ls",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410381247504-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_Bache_IV_Paves"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410389636113-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"330.83"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2in2xap",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410389636113-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_Garches"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410402219026-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"0.81"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2iukmc2",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410402219026-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_H-Brezin"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410410607635-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"124.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2izkf0z",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410410607635-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_HC1"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410414801940-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"168.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2j22bdg",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410414801940-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_HC2"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410418996245-1",
+            "@id":"_:_:bNE-1c1mm16p0wepa1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2j4k7px",
+            "@id":"S-1i:1c1mm16te80ib",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410418996245-1"
+               "@id":"_:_:bNE-1c1mm16p0wepa1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_Hubies_Bas"
+               "@id":"waves:QE_HC1"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -1260,32 +724,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410427384854-1",
+            "@id":"_:_:bNE-1c1mm16qmc2o01",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"243.38"
+               "@value":"103.86"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2j9k0eu",
+            "@id":"S-1i:1c1mm16to7lw5",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410427384854-1"
+               "@id":"_:_:bNE-1c1mm16qmc2o01"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_Laval"
+               "@id":"waves:Q_DT18"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -1294,610 +762,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410431579159-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"0.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jc1wrb",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410431579159-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_Montbauron_reservoir_1"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410435773464-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"64.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jejt3s",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410435773464-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QE_Montbauron_reservoir_2"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410444162073-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"17.48"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jjjlsp",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410444162073-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Brezin"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410452550682-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"38.53"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jojehm",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410452550682-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Garches_Bd_Pasteur"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410456744987-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"77.06"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jr1au3",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410456744987-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Garches_Le_Pierrier"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410460939292-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"13.8"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jtj76k",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410460939292-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Gobert_vers_Buc_La_Boulie"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410465133597-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"9.78"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jw13j1",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410465133597-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Gobert_vers_BucLesLoges"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410469327902-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"4.72"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2jyizvi",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410469327902-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Gobert_vers_Versailles"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410473522207-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"7.28"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2k10w7z",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410473522207-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HC1_Dep1"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410481910816-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"5.74"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2k60oww",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410481910816-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HC1_Dep2"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410486105121-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"24.31"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2k8il9d",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410486105121-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HC2_Dep1"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410494493730-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"17.8"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2kdidya",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410494493730-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HC2_Dep2"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410498688035-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"101.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2kg0aar",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410498688035-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HH1_Dep1"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410507076644-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"102.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2kl02zo",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410507076644-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HH1_Dep2"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410515465253-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"105.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2kpzvol",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410515465253-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HH2_Dep1"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410519659558-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"99.0"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2kshs12",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410519659558-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_HH2_Dep2"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410523853863-1",
-            "@type":"ssn:ObservationValue",
-            "qudt:numericValue":{
-               "@type":"xsd:double",
-               "@value":"485.79"
-            },
-            "qudt:unit":""
-         },
-         {
-            "@id":"S-1i:1bdc1m2kuzodj",
-            "@type":"ssn:SensorOutput",
-            "ssn:hasValue":{
-               "@id":"_:b-6234973410523853863-1"
-            },
-            "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_IVPaves1500_bypass"
-            },
-            "ssn:startTime":{
-               "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
-            }
-         }
-      ],
-      "@context":{
-         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
-         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-         "xsd":"http://www.w3.org/2001/XMLSchema#",
-         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
-      }
-   },
-   {
-      "@graph":[
-         {
-            "@id":"_:b-6234973410528048168-1",
+            "@id":"_:_:bNE-1c1mm16obxf8r1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2kxhkq0",
+            "@id":"S-1i:1c1mm16uaop09",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410528048168-1"
+               "@id":"_:_:bNE-1c1mm16obxf8r1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_IVPaves1500"
+               "@id":"waves:Q_DT12"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -1906,32 +800,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410532242473-1",
+            "@id":"_:_:bNE-1c1mm16shrc0a1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
                "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"-1.0%",
+            "waves:flag3":"4.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2kzzh2h",
+            "@id":"S-1i:1c1mm16uznogu",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410532242473-1"
+               "@id":"_:_:bNE-1c1mm16shrc0a1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_IVPaves4500"
+               "@id":"waves:QE_Hubies_Haut"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -1940,32 +838,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410536436778-1",
+            "@id":"_:_:bNE-1c1mm16rdsyh11",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"74.0"
+               "@value":"0.0"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2l2hdey",
+            "@id":"S-1i:1c1mm16vc5674",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410536436778-1"
+               "@id":"_:_:bNE-1c1mm16rdsyh11"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Laval"
+               "@id":"waves:Q_EG04-1"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -1974,32 +876,36 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410540631083-1",
+            "@id":"_:_:bNE-1c1mm16un66qj1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"216.0"
+               "@value":"55.29"
             },
-            "qudt:unit":""
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
          },
          {
-            "@id":"S-1i:1bdc1m2l4z9rf",
+            "@id":"S-1i:1c1mm16wb3r1h",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410540631083-1"
+               "@id":"_:_:bNE-1c1mm16un66qj1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Satory_vers_IV_Paves"
+               "@id":"waves:Q_EN01"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
@@ -2008,32 +914,1556 @@
    {
       "@graph":[
          {
-            "@id":"_:b-6234973410549019692-1",
+            "@id":"_:_:bNE-1c1mm16vtmgma1",
             "@type":"ssn:ObservationValue",
             "qudt:numericValue":{
                "@type":"xsd:double",
-               "@value":"367.0"
+               "@value":"525.13"
             },
-            "qudt:unit":""
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
          },
          {
-            "@id":"S-1i:1bdc1m2l9z2gc",
+            "@id":"S-1i:1c1mm16wnl8rs",
             "@type":"ssn:SensorOutput",
             "ssn:hasValue":{
-               "@id":"_:b-6234973410549019692-1"
+               "@id":"_:_:bNE-1c1mm16vtmgma1"
             },
             "ssn:isProducedBy":{
-               "@id":"http://waves-rsp.org/resource#QS_Satory_vers_Toussus"
+               "@id":"waves:QE_Bache_IV_Paves"
             },
             "ssn:startTime":{
                "@type":"xsd:dateTime",
-               "@value":"2014-01-03T21:00:00.000+01:00"
+               "@value":"2014-01-04T12:15:00.000Z"
             }
          }
       ],
       "@context":{
+         "waves":"http://waves-rsp.org/resource#",
          "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
-         "S-1i":"http://localhost/historisation/stream/1i/",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm16w145nn1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"27.65"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm16x02qi1",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm16w145nn1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Brezin"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm16xrjmb11",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"73.8"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm16ygilrk",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm16xrjmb11"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_H-Brezin"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm16y6j0dq1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"26.8"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm16yqi75e",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm16y6j0dq1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Gobert_vers_Buc_La_Boulie"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm16yqi75d1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"527.76"
+            },
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
+         },
+         {
+            "@id":"S-1i:1c1mm16z2zovo",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm16yqi75d1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_Montbauron_reservoir_2"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm16zkgzat1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"0.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm16zzgddj",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm16zkgzat1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_Hubies_Bas"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm1704g62g1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"346.97"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm170jfk57",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm1704g62g1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_Montbauron_reservoir_1"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm170jfk581",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"19.55"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm170vx1vi",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm170jfk581"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HC2_Dep2"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm170vx1vj1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"13.3"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm1715wn9e",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm170vx1vj1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Gobert_vers_Versailles"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm1715wn9f1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"-375.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm171ie4zp",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm1715wn9f1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Hubies_Haut_vers_Louveciennes"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm171ndxon1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"58.24"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm1727d4g9",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm171ndxon1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Qref_Brezin"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm172ouevf1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"26.92"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm1736bpam",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm172ouevf1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HC2_Dep1"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm1733tsy51",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"69.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm173lb3dd",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm1733tsy51"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HH2_Dep1"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm173nszpu1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"19.71"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm173xsl3n",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm173nszpu1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HC1_Dep1"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm1740ahg41",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"108.1"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm174f9viu",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm1740ahg41"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Garches_Le_Pierrier"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm174mrkk91",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"67.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17598nod",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm174mrkk91"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HH1_Dep2"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm175gqcpr1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"146.79"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm175t7ug2",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm175gqcpr1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_400G"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm176i6twk1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"130.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"3.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm176s6fae",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm176i6twk1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Laval"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm176uobmx1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"0.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm177h5er0",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm176uobmx1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_BE04"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm177jnb3h1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"188.3679"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"1.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17814lio",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm177jnb3h1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_IVPaves4500"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17864e7n1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"73.21"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm178ilvxy",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17864e7n1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_600-300"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm178ilvxz1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"410.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm178v3do8",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm178ilvxz1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Satory_vers_Toussus"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm178v3do91",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"528.12"
+            },
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
+         },
+         {
+            "@id":"S-1i:1c1mm1797kvej",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm178v3do91"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_IVPaves1500_bypass"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm1797kvei1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"935.89"
+            },
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
+         },
+         {
+            "@id":"S-1i:1c1mm179k2d4s",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm1797kvei1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_700-650"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm179u1yil1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"0.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17ae15a7",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm179u1yil1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_DT10"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17a91cla1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"15.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17b5i135",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17a91cla1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_EG05"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17avifpc1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"0.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17bfhmgy",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17avifpc1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_HC2"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17bfhmgz1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"658.0"
+            },
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
+         },
+         {
+            "@id":"S-1i:1c1mm17bzgt8l",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17bfhmgz1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_DE05"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17bzgt8k1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"0.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17cbyayu",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17bzgt8k1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_DT17"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17cgy3nr1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"4.660118"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17ctfle0",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17cgy3nr1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_Bache_Brezin"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17ctfle11",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"0.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17d8ezgq",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17ctfle11"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:Q_DT02"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17diekuj1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"648.0"
+            },
+            "waves:flag1":"NaN",
+            "waves:flag2":"NaN",
+            "waves:flag3":"NaN",
+            "waves:flag4":"NaN"
+         },
+         {
+            "@id":"S-1i:1c1mm17dpw9vw",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17diekuj1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_Gobert"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17duw2kt1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"48.49"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17e4vnyn",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17duw2kt1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Garches_Bd_Pasteur"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17e2drm61",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"67.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17emcyds",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17e2drm61"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HH1_Dep1"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17f1ccgh1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"251.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17fst89g",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17f1ccgh1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Satory_vers_IV_Paves"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17f8u1hu1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"2.19"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17gka42d",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17f8u1hu1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_Laval"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17fntfkj1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"20.68"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17grrt3q",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17fntfkj1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_Gobert_vers_BucLesLoges"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17gz9i531",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"65.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17ho8hlk",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17gz9i531"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HH2_Dep2"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17ht8aah1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"13.0"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"5.0%",
+            "waves:flag3":"6.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17i5ps0r",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17ht8aah1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QE_Satory_1"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17i37voa1",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"24.22"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17ikp63h",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17i37voa1"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_HC1_Dep2"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
+         "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+         "xsd":"http://www.w3.org/2001/XMLSchema#",
+         "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
+      }
+   },
+   {
+      "@graph":[
+         {
+            "@id":"_:_:bNE-1c1mm17ii79r01",
+            "@type":"ssn:ObservationValue",
+            "qudt:numericValue":{
+               "@type":"xsd:double",
+               "@value":"23.51"
+            },
+            "waves:flag1":"100%",
+            "waves:flag2":"0.0%",
+            "waves:flag3":"0.0%",
+            "waves:flag4":"0"
+         },
+         {
+            "@id":"S-1i:1c1mm17iuorha",
+            "@type":"ssn:SensorOutput",
+            "ssn:hasValue":{
+               "@id":"_:_:bNE-1c1mm17ii79r01"
+            },
+            "ssn:isProducedBy":{
+               "@id":"waves:QS_IVPaves1500"
+            },
+            "ssn:startTime":{
+               "@type":"xsd:dateTime",
+               "@value":"2014-01-04T12:15:00.000Z"
+            }
+         }
+      ],
+      "@context":{
+         "waves":"http://waves-rsp.org/resource#",
+         "qudt":"http://data.nasa.gov/qudt/owl/qudt#",
+         "S-1i":"http://localhost/first-tests/stream/1i/",
          "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
          "xsd":"http://www.w3.org/2001/XMLSchema#",
          "ssn":"http://purl.oclc.org/NET/ssnx/ssn#"
