@@ -1,13 +1,16 @@
 package org.waves_rsp.data_vis;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import org.waves_rsp.data_vis.json.JsonReader;
+
+import com.eclipsesource.json.JsonArray;
 
 @Path("flags")
 public class FlagsResource {
@@ -18,13 +21,11 @@ public class FlagsResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getFlags() throws IOException {
-    	
+    public Response getFlags() throws IOException {
     	// TODO: Instead of reading the file, use real time data
-    	
-    	String json = getResourceFile("flags.json");
-    	
-        return json;
+    	JsonArray json = JsonReader.getInstance()
+    			.getResourceFileAsJsonArray("flags.json");
+        return Response.ok(json.toString()).build();    	
     }
     
 	// ----------------------------------------
@@ -34,46 +35,11 @@ public class FlagsResource {
     @GET
     @Path("streams")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getAllFlagsStreams() {
-    	
+    public Response getAllFlagsStreams() throws IOException {
     	// TODO: Replace with real time flags stream IDs
-    	
-    	String streamIds = getResourceFile("list-flags-streams.json");
-    	
-    	return streamIds;
+    	JsonArray streamIds = JsonReader.getInstance()
+    			.getResourceFileAsJsonArray("list-flags-streams.json");
+    	return Response.ok(streamIds.toString()).build();
     }
     
-    /**
-     * Method to be removed from this class once get the real time data
-     * 		instead of fixed file data
-     * 
-     * Get file in resource folder as string
-     * 
-     * @param filename: File name in the resources folder
-     * @return file string
-     */
-    private String getResourceFile(String filename) {
-
-    	StringBuilder result = new StringBuilder("");
-
-    	//Get file from resources folder
-    	ClassLoader classLoader = getClass().getClassLoader();
-    	File file = new File(classLoader.getResource(filename).getFile());
-
-    	try (Scanner scanner = new Scanner(file)) {
-
-    		while (scanner.hasNextLine()) {
-    			String line = scanner.nextLine();
-    			result.append(line).append("\n");
-    		}
-
-    		scanner.close();
-
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
-
-    	return result.toString();
-    }
-
 }

@@ -12,6 +12,31 @@
     <artifactId>data-vis</artifactId>
     <packaging>war</packaging>
     <name>data-vis</name>
+    
+    <repositories>
+		<repository>
+			<id>clojars.org</id>
+			<url>http://clojars.org/repo</url>
+		</repository>
+
+		<repository>
+			<id>repo.scalanlp.org</id>
+			<url>http://repo.scalanlp.org/repo</url>
+		</repository>
+
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net repository</name>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+
+		<repository>
+			<id>osgeo</id>
+			<name>Open Source Geospatial Foundation Repository</name>
+			<url>http://download.osgeo.org/webdav/geotools/</url>
+		</repository>
+
+	</repositories>
 
     <build>
         <finalName>data-vis</finalName>
@@ -48,7 +73,11 @@
             <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
             <!-- artifactId>jersey-container-servlet</artifactId -->
         </dependency>
-		
+		<dependency>
+		  <groupId>com.eclipsesource.minimal-json</groupId>
+		  <artifactId>minimal-json</artifactId>
+		  <version>0.9.4</version>
+		</dependency>
     </dependencies>
     <properties>
         <jersey.version>2.25</jersey.version>

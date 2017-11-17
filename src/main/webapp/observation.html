@@ -30,11 +30,10 @@
       <li class="nav-item">
         <a class="nav-link" href="/data-vis/anomaly.html">Anomalies</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/history.html">History</a>
+      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 <!-- End of Navbar -->
@@ -86,12 +85,17 @@
     <!-- End of Left Side -->
     <!-- Right Side -->
     <div class="col-sm-3">
+    <!-- Search Button -->
+	<div class="input-group stylish-input-group" style="margin-top:24px">
+	  <input id="searchSensor" class="form-control" placeholder="Search Sensor ..." type="search">
+	</div>
+	<!-- End of Search Button -->
     <!-- Sensors Selector -->
-    <div class="card" style="width:100%; margin-top:24px">
+    <div class="card" style="width:100%;margin-top:12px">
       <div class="card-header">
         Sensors
       </div>
-      <ul class="list-group list-group-flush" style="max-height:826px; overflow:scroll;" id="sensors">
+      <ul class="list-group list-group-flush" style="max-height:776px; overflow:scroll;" id="sensors">
       </ul>
     </div>
     <!-- End of Sensor Selector -->
@@ -255,7 +259,7 @@ function initMap() {
     });
     
     var geocoder = new google.maps.Geocoder();
-    var address = "Garches France";
+    var address = "Brezin France";
     
     console.log(geocoder);
 
@@ -295,6 +299,23 @@ $('ul#sensors').on('change', ':checkbox', function(){
         delete circles[name];
     }
 
+});
+
+// ---------------------------------
+// Search Sensor By Name
+// ---------------------------------
+
+$("input#searchSensor").keyup(function(e){
+	var filter = $(this).val().toUpperCase();
+	var sectorList = $("ul#sensors li");
+	for(var i = 0; i < sectorList.length; i++ ){
+		var sectorName = $(sectorList[i]).text();
+		if( sectorName.toUpperCase().indexOf(filter) > -1 ){
+			$(sectorList[i]).css("display", "block");
+		} else {
+			$(sectorList[i]).css("display", "none");
+		}
+	}
 });
     
 // ---------------------------------

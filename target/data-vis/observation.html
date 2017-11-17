@@ -1,0 +1,577 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Index page of waves data vis">
+    <meta name="author" content="Yufan Zheng">
+
+    <title>Waves Vis</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/data-vis">Waves Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/data-vis/observation.html">Observation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/flags.html">Flags</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/anomaly.html">Anomalies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/history.html">History</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- End of Navbar -->
+
+<!-- Main Vis Panel -->
+<main role="main">
+<div class="container-fluid" style="margin-top:56px">
+<div class="row">
+<div class="col-sm-12">
+  <!-- Form to choose RDF stream for vis -->
+  <form style="margin-top:25px"> 
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Choose a Stream: </label>
+      <div class="col-sm-3">
+        <select class="form-control" id="streams"></select>
+      </div>
+      <div class="col-sm-3">
+          <button class="btn btn-success" type="button" id="receiveObs">Receive Stream Data</button>
+      </div>
+    </div>
+  </form>
+  <!-- End of form-->
+</div>
+</div><!-- end of row -->
+</div><!-- end of container -->
+
+<div class="container-fluid" style="background-color: #eee; padding-bottom:30px">
+  <div class="row">
+    <!-- Left Side -->
+    <div class="col-sm-9">
+      <br>
+      <!-- Map -->
+      <div style="background-color: #ffffff;">
+      <!-- Title -->
+      <p class="text-center" style="color:#333333;font-size:16px;fill:#333333;padding-top:5px;margin-bottom:15px;">Observation Map Chart</p>
+      <!-- End of Title -->
+      <!-- Google Map -->
+      <div id="map" style="height:360px;margin-left:10px;margin-right:10px;">Loading Map...</div>
+      <!-- End of Google Map -->
+      <br>
+      </div>
+      <!-- End of Map -->
+      <br><br>
+      <!-- Chart -->
+      <div id="chart">Loading Chart...</div>
+      <!-- End of Chart -->
+      <br>
+    </div>
+    <!-- End of Left Side -->
+    <!-- Right Side -->
+    <div class="col-sm-3">
+    <!-- Search Button -->
+	<div class="input-group stylish-input-group" style="margin-top:24px">
+	  <input id="searchSensor" class="form-control" placeholder="Search Sensor ..." type="search">
+	</div>
+	<!-- End of Search Button -->
+    <!-- Sensors Selector -->
+    <div class="card" style="width:100%;margin-top:12px">
+      <div class="card-header">
+        Sensors
+      </div>
+      <ul class="list-group list-group-flush" style="max-height:776px; overflow:scroll;" id="sensors">
+      </ul>
+    </div>
+    <!-- End of Sensor Selector -->
+    <br>
+    </div>
+    <!-- End of Right Side -->
+  </div>
+</div>
+</main>
+<!-- End of Panel -->
+
+<!-- jQuery js -->
+<script src="js/jquery.min.js"></script>
+<!-- popper js -->
+<script src="js/popper.min.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Highchart js -->
+<script src="js/highstock.min.js"></script>
+<script src="js/exporting.min.js"></script>
+
+<script>
+
+// ---------------------------------
+// Vis Related Global Variable
+// ---------------------------------
+
+var api;                     // Google Map Chart API
+var map;                     // Map to draw circles
+var pointer;                 // Map maker that helps find the sensor location
+var circles = {};            // sensor_name -> circle mappings
+var sensors = [];            // Sensors and location related information
+var streams = [];            // List of waves streams 
+    
+// Init line chart div with highcharts
+var chart = Highcharts.stockChart("chart", {
+    chart: {
+        events: {
+            load: function () {
+                var series = this.series[0];
+            }
+        }
+    },
+    title: {
+        text: 'Observation Line Chart'
+    },
+    series: [{
+        name: "Observation",
+        data: (function () {
+            // generate an array of 0 data for
+            var data = [],
+                time = (new Date()).getTime(),
+                i,
+                j;
+            for (i = -999; i <= 0; i += 1) {
+                data.push([
+                    time + i * 1000,
+                    0,
+                    1
+                ]);
+            }
+            return data;
+        }())
+    }],
+    yAxis: {
+        title: {
+            text: 'Observation'
+        }
+    },
+    rangeSelector: {
+        buttons: [{
+            count: 1,
+            type: 'minute',
+            text: '1M'
+        }, {
+            count: 5,
+            type: 'minute',
+            text: '5M'
+        }, {
+            type: 'all',
+            text: 'All'
+        }],
+        inputEnabled: false,
+        selected: 0
+    }
+});   
+    
+// ---------------------------------
+// Get sensor location related info
+// ---------------------------------
+    
+$(document).ready(function(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data-vis/webapi/context", true);
+    xhr.onreadystatechange = (event) => {
+      if (xhr.readyState == XMLHttpRequest.DONE) {
+          // Step 1: Parse json
+          var json = JSON.parse(xhr.responseText);
+          var graphs = json['@graph'];
+          console.log(graphs);
+      	  for( var i = 0; i < graphs.length; i++ ){
+      		  var obj = graphs[i];
+      		  var type = obj['@type'];
+      		  if( type == 'http://purl.oclc.org/NET/ssnx/ssn#Sensor' ){
+      			  var name = obj['rdfs:label'];
+      			  var latitude = obj['http://www.w3.org/2003/01/geo/wgs84_pos#lat']['@value'];
+      			  var longitude = obj['http://www.w3.org/2003/01/geo/wgs84_pos#long']['@value'];
+      			  var id = obj['@id'];
+      			  var sensor = {}
+      			  sensor['name'] = name;
+      			  sensor['latitude'] = latitude;
+      			  sensor['longitude'] = longitude;
+      			  sensor['id'] = id;
+      			  sensor['observation'] = 0;
+      			  sensors.push(sensor);
+      		  }
+      	  }
+      	  for( var i = 0; i < sensors.length; i++ ){
+      		  var name = sensors[i]['name'];
+      		  var $sensorListItem = $('<li class="list-group-item"><input type="checkbox" name="sector" value="'+name+'"> '+name+'</li>');
+      		  $('ul#sensors').append($sensorListItem);
+      	  }
+      }
+    }
+    xhr.send();
+});
+    
+// ---------------------------------
+// Get list of RDF streams
+// ---------------------------------
+    
+$(document).ready(function(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data-vis/webapi/observation/streams", true);
+    xhr.onreadystatechange = (event) => {
+      if (xhr.readyState == XMLHttpRequest.DONE) {
+          var json = JSON.parse(xhr.responseText);
+      	  for( var i = 0; i < json.length; i++ ){
+      		  var streamId = json[i];
+              streams.push(streamId);
+      		  var $streamOption = $('<option value="'+streamId+'">'+streamId+'</option>');
+      		  $('select#streams').append($streamOption);
+      	  }
+      }
+    }
+    xhr.send();
+});
+    
+// ---------------------------------
+// Create Google Map
+// ---------------------------------
+    
+function initMap() {
+    api = google.maps;
+    // Create the map.
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 11,
+        center: {lat: 4.8851827E1, lng: 2.110242E0},
+        mapTypeId: 'terrain'
+    });
+    
+    var geocoder = new google.maps.Geocoder();
+    var address = "Brezin France";
+    
+    console.log(geocoder);
+
+    geocoder.geocode( { 'address': address}, function(results, status) {
+
+    if (status == google.maps.GeocoderStatus.OK) {
+        var latitude = results[0].geometry.location.lat();
+        var longitude = results[0].geometry.location.lng();
+        console.log(latitude, longitude);
+        } 
+    }); 
+}
+    
+// ---------------------------------
+// Add/Remove Circle to/from Map
+// ---------------------------------
+  
+$('ul#sensors').on('change', ':checkbox', function(){
+    
+    // Get the name of sensor to be added
+    var name = $(this).val();
+    if( $(this).prop('checked') ){
+        // Get sensor from name
+    	var sensor    = getSensorByName(name);
+    	var latitude  = Number(sensor['latitude']);
+    	var longitude = Number(sensor['longitude']);
+    	console.log("Plot sensor " + name + ", long: " + longitude + ", lat: " + latitude);
+        var color  = getRandomColor();
+        // Add line chart and map chart
+        addSensorToLineChart(name, color);
+        var circle = addSensorToMap(latitude, longitude, name, color);
+        circles[name] = circle;
+    } else {
+        // Remove the sensor vis from line chart and map chart
+        removeSensorFromMap(name);
+        removeSeriesFromLineChart(name);
+        delete circles[name];
+    }
+
+});
+
+// ---------------------------------
+// Search Sensor By Name
+// ---------------------------------
+
+$("input#searchSensor").keyup(function(e){
+	var filter = $(this).val().toUpperCase();
+	var sectorList = $("ul#sensors li");
+	for(var i = 0; i < sectorList.length; i++ ){
+		var sectorName = $(sectorList[i]).text();
+		if( sectorName.toUpperCase().indexOf(filter) > -1 ){
+			$(sectorList[i]).css("display", "block");
+		} else {
+			$(sectorList[i]).css("display", "none");
+		}
+	}
+});
+    
+// ---------------------------------
+// Hover to show pointer in map
+// ---------------------------------
+    
+$('ul#sensors').on('mouseover', 'li', function(){
+    
+    // Get current hover list's sensor name
+    var name = $(this).text().trim();
+    // Get latitude and longitude of sensor
+    var sensor    = getSensorByName(name);
+    var latitude  = Number(sensor['latitude']);
+    var longitude = Number(sensor['longitude']);
+    pointer = new google.maps.Marker({
+      position: {
+          lat: latitude, 
+          lng: longitude
+      },
+      map: map
+    });
+});
+    
+$('ul#sensors').on('mouseout', 'li', function(){
+    // Remove pointer
+    pointer.setMap(null);
+});
+    
+// ---------------------------------
+// Add New Sensor for Vis
+// --------------------------------- 
+    
+function addSensorToLineChart(name, color){
+    if( chart.series.length > 0 ){
+        if( chart.series[0].name == "Observation"){
+            // The first time add a new series
+            // Remove the default series
+            chart.series[0].remove(true);
+        }
+    }
+    addSeries(name, color);
+}
+
+function addSeries(name, color){
+    chart.addSeries({
+        name: name,
+        color: color,
+        data: (function () {
+            // generate an array of 0 data for
+            var data = [],
+                time = (new Date()).getTime(),
+                i,
+                j;
+            for (i = -999; i <= 0; i += 1) {
+                data.push([
+                    time + i * 1000,
+                    0,
+                    1
+                ]);
+            }
+            return data;
+        }())
+    });
+}
+
+function addSensorToMap(lat, lng, name, color){
+    var circle = new api.Circle({
+        strokeColor: color,
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: color,
+        fillOpacity: 0.35,
+        title:name,
+        map: map,
+        center: {lat: lat, lng: lng},
+        radius: 500
+    });
+    // Hover circle to see the sensor name
+    api.event.addListener(circle,'mouseover',function(){
+    	var sensorName = this.get('title');
+    	var sensorObs  = getSensorObsByName(sensorName);
+        this.getMap().getDiv().setAttribute('title', sensorName + ' : ' + sensorObs);
+    });
+    api.event.addListener(circle,'mouseout',function(){
+        this.getMap().getDiv().removeAttribute('title');
+    });
+    circles[name] = circle;
+    return circle;
+}
+
+// ---------------------------------
+// Remove Sensor from Charts
+// --------------------------------- 
+
+function removeSeriesFromLineChart(name){
+    var series = getSeriesByName(name);
+    series.remove(true);
+}
+    
+function removeSensorFromMap(sensor){
+    var circle = circles[sensor];
+    circle.setMap(null);
+    delete circles[sensor];
+}
+
+// ---------------------------------
+// Click to start receiving data
+// ---------------------------------
+    
+$('button#receiveObs').click(function(){
+    
+    setInterval(function(){
+        // Every 1 second, send request to get the obeservation values
+        var xhr = new XMLHttpRequest();
+        var streamId = $("select#streams").val();
+        xhr.open("GET", "/data-vis/webapi/observation?id="+streamId, true);
+        xhr.onreadystatechange = (event) => {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+              // Step 1: Parse json
+              var json = JSON.parse(xhr.responseText);
+              // Step 2: Fetch the observation value
+              var observations = {};
+              for( var i = 0; i < json.length; i++ ){
+            	  var obs = json[i];
+            	  var value = obs['@graph'][0]['qudt:numericValue']['@value'];
+            	  var sensorId = obs['@graph'][1]['ssn:isProducedBy']['@id'];
+            	  var sensor = getSensorById(sensorId);
+            	  var sensorName = sensor['name'];
+            	  setSensorObsByName(sensorName, value);
+            	  observations[sensorName] = value;
+              }
+              // Step 3: for each plotted circle
+              // 	update their radius with observation value
+              for( var name in circles ){
+            	  var circle = circles[name];
+                  var value = 0.0;
+            	  if( name in observations ){
+                      if( observations[name] != "undefined" ){
+                          value = parseFloat(observations[name]);  
+                      }
+            		  var radius = value * 10;
+            		  setCircleRadius(circle, radius);
+            	  }
+                  console.log("Add point to series " + name + " value " + value);
+                  addPointToSeries(name, value);
+              }
+          }
+        }
+        xhr.send();
+    }, 1000);
+});
+    
+// ---------------------------------
+// Update values
+// ---------------------------------
+
+//Update map chart value by set circle radius
+function setCircleRadius(circle, radius){
+	circle.setRadius(radius);    
+}    
+
+//Update line chart value by add new point
+function addPointToSeries(name, y){
+ var x = (new Date()).getTime();
+ for(var i = 0; i < chart.series.length; i++ ){
+     var series = chart.series[i];
+     if( name == series.name ){
+         chart.series[i].addPoint([x, y], true, true);
+     }
+ } 
+}
+
+// ---------------------------------
+// Getters
+// ---------------------------------
+
+function getSeriesByName(name){
+    for(var i = 0; i < chart.series.length; i++ ){
+        var series = chart.series[i];
+        if( name == series.name ){
+            return series;
+        }
+    }   
+}
+
+function getSensorByName(name){
+	for( var i = 0; i < sensors.length; i++ ){
+		if( sensors[i]['name'] == name ){
+			return sensors[i];
+		}
+	}
+}
+
+function getSensorById(id){
+	for( var i = 0; i < sensors.length; i++ ){
+		if( sensors[i]['id'] == id ){
+			return sensors[i];
+		}
+	}
+}
+
+function setSensorObsByName(name, value){
+	for( var i = 0; i < sensors.length; i++ ){
+		if( sensors[i]['name'] == name ){
+			return sensors[i]['observation'] = value;
+		}
+	}
+}
+
+function getSensorObsByName(name, value){
+	for( var i = 0; i < sensors.length; i++ ){
+		if( sensors[i]['name'] == name ){
+			return sensors[i]['observation'];
+		}
+	}
+}
+    
+// ---------------------------------
+// Random pick color
+// ---------------------------------    
+    
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  color = darken(color);
+  return color;
+}
+
+// Make the color darker so that easy to see in the map
+function darken(hex, lum) {
+  // validate hex string
+  hex = String(hex).replace(/[^0-9a-f]/gi, '');
+  if (hex.length < 6) {
+    hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+  }
+  lum = lum || 0;
+
+  // convert to decimal and change luminosity
+  var rgb = "#", c, i;
+  for (i = 0; i < 3; i++) {
+    c = parseInt(hex.substr(i*2,2), 16);
+    c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+    rgb += ("00"+c).substr(c.length);
+  }
+
+  return rgb;
+}
+    
+
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwoT7iVUJfFq0-owyD2nvK-m5dZ26FawY&callback=initMap">
+</script>
+
+</body>
+</html>

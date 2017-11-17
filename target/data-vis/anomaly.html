@@ -1,0 +1,931 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Index page of waves data vis">
+    <meta name="author" content="Yufan Zheng">
+
+    <title>Waves Vis</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+	<!-- JQuery Data Table CSS -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+	<!-- Bootstrap select CSS -->
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/data-vis">Waves Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/observation.html">Observation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/flags.html">Flags</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/data-vis/anomaly.html">Anomalies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/data-vis/history.html">History</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- End of Navbar -->
+
+<!-- Main Content for vis of anomaly detection -->
+<main role="main" id="anomalyDetection" style="display:block">
+	<div class="container-fluid" style="margin-top:56px">
+	  <div class="row justify-content-between">
+		  <!-- Left Side --> 
+		  <div class="col-md-9">
+			  <!-- Main Vis Panel -->
+			  <div id="panel" style="margin-top:20px"></div>
+			  <!-- End of Panel -->
+			  <!-- Data Table -->
+			  <p class="text-center" style="padding:10px">Anomaly Table</p>
+			  <table class="display text-center" id="anomalyTable">
+				<thead>
+				  <tr>
+					<th scope="col">No.</th>
+					<th scope="col">Sector</th>
+					<th scope="col">Start Time</th>
+					<th scope="col">End Time</th>
+					<th scope="col">Weight</th>
+					<th scope="col">Explanation</th>
+				  </tr>
+				</thead>
+			  </table> 
+			  <!-- End of Table -->
+		  </div> 
+		  <!-- End of Left Side --> 
+		  <!-- Right Side -->
+		  <div class="col-md-3 hiddex-sm">
+			<p style="padding:5px"></p>
+			<button type="button" class="btn btn-success btn-block" id="getAnomaly">Receiving Anomaly Data</button>
+			<p style="padding:5px"></p>
+			<!-- Search Button -->
+			<div class="input-group stylish-input-group">
+              <input id="searchSector" class="form-control" placeholder="Search Sector ..." type="search">
+            </div>
+            <!-- End of Search Button -->
+			<!-- Sector Selector -->
+			<div class="card" style="width:100%; margin-top:10px" id="sectors">
+			  <div class="card-header">
+				Sectors
+			  </div>
+			  <ul class="list-group list-group-flush" style="max-height:630px; overflow-x:scroll;">
+			  </ul>
+			</div>
+			<!-- End of Sector Selector -->
+		  </div>
+	  <!-- End of Right Side -->
+	  </div>
+	</div>
+</main>
+<!-- End of Main Content -->
+
+<!-- Main Content for vis of anomaly detection -->
+<main class="hide" role="main" id="anomalyExplanation" style="display:none">
+<div class="container-fluid" style="margin-top:56px">
+ <div class="row" style="padding-top:20px">
+   <div class="col-sm-9">
+     <h3 style="padding-left:30px;">Anomaly Explanation</h3>
+   </div>
+   <div class="col-sm-3">
+     <button class="btn btn-info btn-block" type="button" id="backToDetectionPage"> &lt;-- Back to Detection Page</button>     
+   </div>
+ </div>
+</div>
+<br>
+<div class="container-fluid" style="background-color:#eee">
+ <div class="row" style="min-height:700px">
+   <div class="col-sm-9">
+     <br>
+     <!-- Map -->
+     <div style="background-color: #ffffff;">
+       <div style="padding:10px"></div>
+       <!-- Google Map -->
+       <div id="map" style="height:360px;margin-left:10px;margin-right:10px;">Loading Map...</div>
+       <!-- End of Google Map -->
+       <div style="padding:10px"></div>
+    </div>     
+    <!-- End of Map -->
+    <br>
+    <!-- Explanation Texts -->
+    <div style="background-color: #ffffff;min-height:300px;max-height:450px;overflow:scroll">
+    <div class="list-group" id="scouterEvents">
+	</div>
+    </div>
+    <!-- End of Explanation -->
+    <br>
+  </div>
+  <div class="col-sm-3">
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Anomaly Info.</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Anomaly at a Glance</h6>
+          <dl class="dl-horizontal" id="anomalyInfo">
+             <dt>Sector Name: </dt>
+             <dd>****</dd>
+             <dt>Start Time: </dt>
+             <dd>****</dd>
+             <dt>End Time: </dt>
+             <dd>****</dd>
+          </dl>
+       </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <form id="eventsFilter">
+          <div class="form-group">
+            <h4>Search by content: </h4>
+            <input type="text" class="form-control" name="text" placeholder="Search Text...">
+            <small class="form-text text-muted">Filter events by its context...</small>
+          </div>
+          <div class="form-group">
+            <h4>Sort by score: </h4>
+			<div class="form-check form-check-inline">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="radio" name="order" value="DESC"> Descending
+			  </label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="radio" name="order" value="ASC"> Ascending
+			  </label>
+			</div>
+          </div>
+          <div class="form-group">
+            <select class="form-control selectpicker" multiple>
+			  <option>Mustard</option>
+			  <option>Ketchup</option>
+			  <option>Relish</option>
+			</select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+<!-- End of Main Content -->
+
+<!-- Modal -->
+<div class="modal fade" id="fullTextModal" tabindex="-1">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Full Text</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">  
+        <pre>...</pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Modal -->
+
+<!-- jQuery js -->
+<script src="js/jquery.min.js"></script>
+<!-- popper js -->
+<script src="js/popper.min.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Highchart js -->
+<script src="js/highstock.min.js"></script>
+<script src="js/exporting.min.js"></script>
+
+<!-- Leaflet js -->
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+
+<!-- JQuery Data Table js -->
+<script src="js/jquery.dataTables.min.js"></script>
+
+<!-- Bootstrap Select js -->
+<script src="js/bootstrap-select.min.js"></script>
+
+<script>
+
+// ---------------------------------
+// Global Variable:
+//   All Charts Dictionary
+//   sector_name -> chart mappings
+// ---------------------------------
+
+// - key  : Sector name :
+//          the name will be used asid of the chart panel
+// - value: Corresponding chart
+var charts = {};
+
+// List of sector names
+var sectors = [];
+
+// Map to show the anomaly and detected related scouter events
+var map = L.map('map').setView([4.8851827E1, 2.130242E0], 11);
+
+// Tile layer for map
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+	maxZoom: 18,
+	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	id: 'mapbox.streets'
+}).addTo(map);
+
+// Polygon for the region's boundary
+var polygon = L.polygon([[37, -109.05],[37, -102.04]]).addTo(map);
+
+// Scouter events
+var events = [];
+
+// List of Markers in map
+// _id -> marker mapping
+var markers = {};
+
+// Anomaly Table
+var anomalyTable = $('table#anomalyTable').DataTable({
+	"order": [[ 0, "desc" ]]
+});
+
+// Id of anomalies in anomaly table row
+var anomalyTableRowId = 0;
+	
+// ---------------------------------
+// Get all sectors
+// ---------------------------------   
+
+$(document).ready(function(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data-vis/webapi/context", true);
+    xhr.onreadystatechange = (event) => {
+      if (xhr.readyState == XMLHttpRequest.DONE) {
+          // Step 1: Parse json
+          var json = JSON.parse(xhr.responseText);
+          var graphs = json["@graph"];
+          // Fetch the list of sector names
+          for(var i = 0; i < graphs.length; i++){
+              var graph = graphs[i];
+              if( graph["@type"] == "http://purl.oclc.org/NET/ssnx/ssn#Platform" ){
+                  var sector = graph["rdfs:label"];
+                  sectors.push(sector);
+              }
+          }
+          // Step 2: Append list of sectors to right side selector
+          for(var i = 0; i < sectors.length; i++){
+              var sector = sectors[i];
+              var $newListItem = $('<li class="list-group-item"><input type="checkbox" name="sector" value="'+sector+'"> '+sector+'</li>');
+              $("#sectors ul").append($newListItem);
+          }
+          // Step 3: Show one chart to remedy the vacancy
+          var $firstSectorCheckbox = $("#sectors ul li input").first();
+          $firstSectorCheckbox.prop( "checked", true );
+          var sector = $firstSectorCheckbox.val();
+          var chart = createChart(sector);
+          charts[sector] = chart;
+      }
+    }
+    xhr.send();
+});
+    
+function parseSectorNameToAddress(name){
+    //
+    // Why need to parse sector label to address?
+    //
+    // For some sector name given in contect.json file, 
+    //   i.e. "SECTEUR 10 - Buzenval 3ème Elévation"
+    // If we give their name directly to google map api, 
+    //   it can not get the longitude and latitude
+    //
+    // This function is to parse the label to an address
+    //   that could be processed by google map api
+    //
+    if( name.startsWith("SECTEUR") ){
+        // "SECTEUR 01 - Villeneuve"              -> "Villeneuve"
+        // "SECTEUR 10 - Buzenval 3ème Elévation" -> "Buzenval 3ème Elévation"
+        name = name.split(" - ")[1];
+        if( label.endsWith("3ème Elévation") ){
+            // "Buzenval 3ème Elévation"    -> "Buzenval"
+            // "Mt Valérien 3éme Elevation" -> "Mt Valérien"
+            name = name.replace(" 3ème Elévation", "");
+        }
+    }
+    return name;
+}
+    
+// ---------------------------------
+// Add / Remove Charts
+// ---------------------------------   
+    
+$('div#sectors').on('change', ':checkbox', function(){
+    // When user select/de-seclect a sector to view
+    var sector = $(this).val();
+    if( $(this).prop('checked') ){
+        // Show the chart
+        var chart = createChart(sector);
+        charts[sector] = chart;
+    } else {
+        // Remove the chart
+        removeChart(sector);
+        delete charts[sector];
+    }
+
+});
+
+// ---------------------------------
+// Highchart Global Settings
+// ---------------------------------
+    
+Highcharts.setOptions({
+    global: {
+        useUTC: false
+    }
+});
+
+// ---------------------------------
+// Create a Chart
+// ---------------------------------
+
+// @Params:
+//   - name: name of the sector,
+//           the name will also be setted as the chart id
+// @Returns:
+//   - Created Chart Object
+function createChart(name){
+    
+    // Create the chart node
+    var $chartNode = $('<div></div>');
+    $chartNode.attr('id', name);
+    $('#panel').append($chartNode);
+    
+    // Init node with highcharts
+    var chart = Highcharts.stockChart(name, {
+        chart: {
+            events: {
+                load: function () {
+                    var series = this.series[0];
+                }
+            }
+        },
+        title: {
+            text: 'Anomaly Detection - ' + name
+        },
+        series: [{
+            name: name,
+            data: (function () {
+                // generate an array of 0 data for
+                var data = [],
+                    time = (new Date()).getTime(),
+                    i,
+                    j;
+                for (i = -999; i <= 0; i += 1) {
+                    data.push([
+                        time + i * 1000,
+                        0,
+                        1
+                    ]);
+                }
+                return data;
+            }())
+        }],
+        yAxis: {
+            title: {
+                text: 'Weights'
+            }
+        },
+        rangeSelector: {
+            buttons: [{
+                count: 1,
+                type: 'minute',
+                text: '1M'
+            }, {
+                count: 5,
+                type: 'minute',
+                text: '5M'
+            }, {
+                type: 'all',
+                text: 'All'
+            }],
+            inputEnabled: false,
+            selected: 0
+        }
+    });   
+    
+    return chart;
+}
+    
+function removeChart(name) {
+    $('#'+name).remove();
+}
+
+// ---------------------------------
+// Append a point to chart
+// ---------------------------------
+
+// @Params:
+//   - chart: chart to add point
+//   - y    : point's y axis
+function addPoint(chart, y){
+    var x = (new Date()).getTime();
+    chart.series[0].addPoint([x, y], true, true);
+}
+
+// ---------------------------------
+// Recieve Data From Back-End
+// ---------------------------------
+
+// When user click on button "Start Receiving Data"
+//  - 1. Get the formatted json data and parse it
+//  - 2. Fetch the sector and anomaly information
+//       Append the data to table below
+//  - 3. Add points for each chart
+//    - 3.1. If this sector has anomaly, append point with weight as y axis
+//    - 3.2. If no anomaly in this sector, append point with 0 as y axis
+//
+$("button#getAnomaly").click(function(e){
+    e.preventDefault();
+    
+    setInterval(function(){
+        // Every 1 second, send request to get the anomaly data
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/data-vis/webapi/anomaly", true);
+        xhr.onreadystatechange = (event) => {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+              
+              // Step 1: Parse json
+              var json = JSON.parse(xhr.responseText);
+              var head = json['head'];
+              results = json['results'];
+              var bindings = results['bindings'];
+              
+              // Step 2: From bindings fetch anomalies
+              // sector -> weight mappings
+              var anomalies = {};
+              // From each data bindings result fetch data
+              for(var i = 0; i < bindings.length; i++){
+                var data = bindings[i];
+                // Get all 4 informations
+                var sector = data['sector']['value'].replace('http://waves-rsp.org/resource#', '');
+                var startTime = data['startTime']['value'];
+                var endTime = data['endTime']['value'];
+                var weight = data['weight']['value'];
+                // Set weight for sector
+                anomalies[sector] = weight;
+                // Append to table
+                appendToTable(sector, startTime, endTime, weight);
+              }
+              
+              // Step 3: Vis on charts 
+              // Iterate each sector chart to append new point
+              for(var sector in charts) {
+                // Get the chart for sector
+                var chart = charts[sector];
+                // If in this sector, we detect the anomaly
+                if(sector in anomalies){
+                  // Append a point with the weight value as y axis 
+                  var weight = anomalies[sector];
+                  addPoint(chart, parseFloat(weight));    
+                } else {
+                  // If no anomaly detected, append 0
+                  addPoint(chart, 0);
+                }
+              }
+          }
+        }
+        xhr.send();
+    }, 1000);
+    
+});
+
+// ---------------------------------
+// Search Sector By Name
+// ---------------------------------
+
+$("input#searchSector").keyup(function(e){
+	var filter = $(this).val().toUpperCase();
+	var sectorList = $("div#sectors li");
+	for(var i = 0; i < sectorList.length; i++ ){
+		var sectorName = $(sectorList[i]).text();
+		if( sectorName.toUpperCase().indexOf(filter) > -1 ){
+			$(sectorList[i]).css("display", "block");
+		} else {
+			$(sectorList[i]).css("display", "none");
+		}
+	}
+});
+
+// ---------------------------------
+// Append Data to Table
+// ---------------------------------
+    
+function appendToTable(sector, startTime, endTime, weight){
+	anomalyTableRowId++;
+	// Use data table api to add new row
+	anomalyTable.row.add([
+		anomalyTableRowId,
+    	sector, 
+    	startTime,
+    	endTime, 
+    	weight, 
+    	`<button class='btn btn-info btn-sm' type='button' name='explain'>Go For It!</button>`
+    ]).draw(false);
+}
+    
+// ---------------------------------
+// Swithc to anomaly explanation page
+// ---------------------------------
+    
+$("table#anomalyTable").on("click", "button[name='explain']", function(){
+	// When user click on "Go for It" button in the anomaly table
+	// Show the anomaly explanation page
+	// ...
+	
+    // Step 1: Get information about the anomaly
+    //   - sector name
+    //   - start time
+    //   - end time
+    //   - address
+    // ...
+    var sector    = $( $(this).parent('td').siblings()[1] ).text();
+    var startTime = $( $(this).parent('td').siblings()[2] ).text();
+    var endTime   = $( $(this).parent('td').siblings()[3] ).text();
+	var address   = parseSectorNameToAddress(sector);
+    
+	// Step 2: Open Anomaly Explanation Page
+	// ...
+	openExplanationPage();
+	
+	// Step 3: Set Anomaly Information Panel's values
+	setValuesForAnomalyInfoPanel(sector, startTime, endTime);
+	
+	// Step 4: Add sector in Map ( draw region boundary )
+	drawSectorRegion(address);
+    
+	// Step 5: Retrive scouter events and show in text explanation panel
+    //   5.1. Do a request for 
+    //   	/data-vis/webapi/anomaly/explanation?sector=XXX?startTime=XXX?endTime=XXX
+    // 		to get the scouter events json
+    //   5.2. Show the explanation texts in the bottom list
+    //		Rank the texts according to the scores.
+	showScouterEvent(sector, startTime, endTime);
+});
+
+// Open Explanation Page
+function openExplanationPage() {
+    $("#anomalyDetection")  .css("display", "none");
+    $("#anomalyExplanation").css("display", "block");
+}
+
+// Set Values For Anomaly Info Panel
+function setValuesForAnomalyInfoPanel(sector, startTime, endTime) {
+    $("dl#anomalyInfo").find(":nth-child(2)").text(sector);
+    $("dl#anomalyInfo").find(":nth-child(4)").text(startTime);
+    $("dl#anomalyInfo").find(":nth-child(6)").text(endTime);
+}
+
+// Draw Sector Region in Map
+function drawSectorRegion(name) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data-vis/webapi/context/sector-boundary?name=" + name, true);
+    xhr.onreadystatechange = (event) => {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            // Step 1: get boundary data
+            var boundary = JSON.parse(xhr.responseText)[0];
+            // Step 2: get polygon coordinates
+            var polygonCoords = parseBoundaryToCoords(boundary);
+            // Step 3: Draw polygon in map
+            drawPolygonInMap(polygonCoords)
+        }
+    }
+    xhr.send();
+}
+
+function parseBoundaryToCoords(boundary){
+  	var polygonCoords = [];
+  	for (var i = 0; i < boundary.length; i++) {
+    	polygonCoords.push([
+      		parseFloat(boundary[i][1]),
+      		parseFloat(boundary[i][0])
+    	]);
+  	}
+  	return polygonCoords;
+}
+
+function drawPolygonInMap(polygonCoords){
+	// Remove exisiting sector polygon
+	if( polygon ){
+		map.removeLayer(polygon);
+	}
+	// Add new sector boundary polygon
+	polygon = L.polygon(polygonCoords).addTo(map);
+	map.invalidateSize();
+	map.fitBounds(polygon.getBounds());
+}
+
+// Show Scouter Event in Panel
+function showScouterEvent(sector, startTime, endTime) {
+    // Step 1: Get scouter events from the server side
+    // ...
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data-vis/webapi/anomaly/explanation" +
+        "?sector=" + sector + "&startTime=" + startTime + "&endTime=" + endTime, true);
+    xhr.onreadystatechange = (event) => {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            // Set global scouter events array as the parsed events
+            events = JSON.parse(xhr.responseText)["events"];
+            setAnomalyExplanationPanelText(events);
+        }
+    }
+    xhr.send();
+}
+
+function setAnomalyExplanationPanelText(events){
+    // Step 1: Clear event panel
+    $("div#scouterEvents").empty();
+    if (events.length == 0) {
+        $("div#scouterEvents").append("<p>No related anomaly events found in the network.</p>");
+    }
+    for (var i = 0; i < events.length; i++) {
+        // Step 2: Append event information to the explanation panel
+        // ...
+        var event = events[i];
+        appendSingleEvent(event);
+    }
+}
+
+function appendSingleEvent(event){
+	// From event fetch information
+	var eventId   		= event["_id"]["$oid"];
+	var startTime 		= event["start"]["$date"];
+	var endTime   		= event["end"]["$date"];
+	var eventsKeyTerms 	= event["eventsKeyTerms"];
+	var description		= event["description"];
+	var source			= event["source"];
+	var score			= event["score"];
+	var location_text	= event["location_text"];
+	
+	// Preprocess description to show only first 200 charactors if it's too long
+	if( description.length > 200 ){
+		description = description.substring(0, 200) + "  <a href='#fullTextModal' data-toggle='modal' data-target='#fullTextModal'> Full Text... </a>";
+	}
+	// Parse milliseconds to formatted date
+	startTime = (new Date(startTime)).customFormat( "#DD#/#MM#/#YYYY# #hh#:#mm#:#ss#" );
+	endTime   = (new Date(endTime))  .customFormat( "#DD#/#MM#/#YYYY# #hh#:#mm#:#ss#" );
+	
+	var $eventInfoPanelItem = $(`<li ` + 
+		<!-- Use MongoDB _id as the list component id -->
+		`id="` + eventId + `" ` + 
+		`class="list-group-item list-group-item-action flex-column align-items-start">
+	   <!-- Header -->
+	   <div class="d-flex w-100 justify-content-between">
+	     <!-- Location -->
+	     <h5 class="mb-1">` + location_text + `
+	        <!-- Checkbox -->
+	     	<small class="form-check-label" style="margin-left:10px">
+         		<input class="form-check-input" type="checkbox"> Show in map
+         	</small>
+         	<!-- End of Checkbox -->
+         </h5>
+	     <!-- End of Location -->
+	     <!-- Time Period -->
+	     <small>` + startTime + `  -  ` + endTime + `</small>
+	     <!-- End of Time Period -->
+	   </div>
+	   <!-- End of Header -->
+	   <!-- Source and Score -->
+	   <small>Source: ` + source + ` - Score: ` + score + `</small>
+	   <!-- End of Source and Score -->
+	   <!-- Description -->
+	   <p class="mb-1">` + description + `</p>
+	   <!-- End of Description -->
+	   <!-- Key Terms -->
+	   <small><b>Key Terms:</b> ` + eventsKeyTerms + `</small>
+	   <!-- End of Key Terms -->
+	 </li>`);
+	$("div#scouterEvents").append($eventInfoPanelItem);
+}
+
+// ---------------------------------
+// Scouter Event Filter
+// ---------------------------------
+
+$("form#eventsFilter").on("keyup", "input[name='text']", function(){
+	updateEventsInPanel(events);
+}).on("change", "input[name='order']", function(){
+	updateEventsInPanel(events);
+});
+
+function updateEventsInPanel(events){
+	
+	// The final events to show after filtering
+	var shownEvents = [];
+	
+	// Get the filter conditions
+	var searchText = $("form#eventsFilter input[name='text']")			.val();
+	var order 	   = $("form#eventsFilter input[name='order']:checked")	.val();
+	
+	// Filter events by the conditions
+	shownEvents = filterEventByText(events, searchText);
+	shownEvents = sortEventByScore (shownEvents, order);
+	
+	// Show only the filtered events
+	setAnomalyExplanationPanelText( shownEvents );
+}
+
+function filterEventByText(events, searchText){
+	// Ignore majuscule minuscule
+	var filter = searchText.toUpperCase();
+	// Filtered events
+	var eventsWithSearchText = [];
+	for(var i = 0; i < events.length; i++ ){
+		var event = events[i];
+		var description = event["description"];
+		if( description.toUpperCase().indexOf(filter) > -1 ){
+			eventsWithSearchText.push( event );
+		}
+	}
+	return eventsWithSearchText;
+}
+
+function sortEventByScore(events, order){
+	// The order must be ASC or DESC
+	if( order != "ASC" && order != "DESC" ){
+		return events;
+	}
+	// Get sorted scores's event index
+	var scoresWithIndex = [];
+	for(var i = 0; i < events.length; i++ ){
+		var score = parseFloat( events[i]["score"] );
+		scoresWithIndex.push( [score, i] );
+	}
+	if( order == "ASC" ){
+		scoresWithIndex.sort(function(left, right) {
+			return left[0] < right[0] ? -1 : 1;
+		});
+	}
+	if( order == "DESC" ){
+		scoresWithIndex.sort(function(left, right) {
+			return left[0] > right[0] ? -1 : 1;
+		});
+	}
+	console.log(scoresWithIndex);
+	// Sort event with the sorted index
+	var sortedEvents = [];
+	for (var j in scoresWithIndex) {
+		var index = scoresWithIndex[j][1];
+		sortedEvents.push( events[index] );
+	}
+	return sortedEvents;
+}
+
+function filterEventsBySources(events, sourceList){
+	
+}
+
+// ---------------------------------
+// Event Listener to Scouter Event Panel Item
+// ---------------------------------
+
+$("div#scouterEvents").on("click", "a", function(){
+	// Click on Full Text link to View Full Text
+	var eventId = $(this).closest("li").attr("id");
+	var event = getEventById(eventId);
+	var description = event["description"];
+	console.log(description);
+	$("#fullTextModal").find(".modal-body pre").text(description);
+});
+
+$("div#scouterEvents").on("change", "input:checkbox", function(){
+	// Select checkbox or de-select checkbox to show or hide the marker
+	var eventId = $(this).closest("li").attr("id");
+	// From event id get event
+	var event = getEventById(eventId);
+	// Get short description as popup
+	var description = event["description"];
+	if( description.length > 100 ){
+		description = description.substring(0, 100) + " ...";
+	}
+	if( $(this).is(":checked") ){
+		// Get event coordinate
+		var coordinate = getEventLocation(event);
+		// Add to map the coordinate
+		var marker = L.marker(coordinate).addTo(map)	// Add marker to map
+			.bindPopup(description);					// Bind popup as description text
+		// Add maker to map
+		map.addLayer(marker);
+		markers[eventId] = marker;
+		// Center marker to map
+		map.panTo(coordinate);
+	} else {
+		// Remove maker from map
+		var marker = markers[eventId];
+		map.removeLayer(marker);
+		delete markers[eventId];
+	}
+});
+
+// ---------------------------------
+// Getter
+// ---------------------------------
+
+function getEventById(id){
+	for(var i = 0; i < events.length; i++){
+		var event = events[i];
+		if( id == event["_id"]["$oid"] ){
+			return event;
+		}
+	}
+}
+
+function getEventLocation(event){
+	var longitude = 0.0;
+	var latitude  = 0.0;
+	var coordinate = [];
+	var location = event["location"];
+	if( location["type"] == "Point" ){
+		// If type is Point, return the point coordinate
+		longitude = location["coordinates"][1];
+		latitude  = location["coordinates"][0];
+	}
+	if( location["type"] == "Polygon" ){
+		// If type is Polygon, return the center of polygon
+		// Length - 1 because the first point and last point is the same 
+		for(var i = 0; i < location["coordinates"][0].length - 1 ; i++) {
+			latitude  = latitude  + parseFloat(location["coordinates"][0][i][0]);
+			longitude = longitude + parseFloat(location["coordinates"][0][i][1]);
+		}
+		longitude = longitude / parseFloat(location["coordinates"][0].length-1);
+		latitude  = latitude  / parseFloat(location["coordinates"][0].length-1);
+	}
+	coordinate = [longitude, latitude];
+	return coordinate;
+}
+
+// ---------------------------------
+// Back to Anomaly Deection Page
+// ---------------------------------
+
+$("button#backToDetectionPage").click(function(){
+    openDetectionPage();
+});
+
+function openDetectionPage() {
+    $("#anomalyExplanation").css("display", "none");
+    $("#anomalyDetection")  .css("display", "block");
+}
+
+// ---------------------------------
+// Custom date time
+// ---------------------------------
+
+// Parse Milleseconds to Custom format data time for read
+Date.prototype.customFormat = function(formatString) {
+	var YYYY, YY, MMMM, MMM, MM, M, DDDD, DDD, DD, D, hhhh, hhh, hh, h, mm, m, ss, s, ampm, AMPM, dMod, th;
+	YY = ((YYYY = this.getFullYear()) + "").slice(-2);
+	MM = (M = this.getMonth() + 1) < 10 ? ('0' + M) : M;
+	MMM = (MMMM = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][M - 1]).substring(0, 3);
+	DD = (D = this.getDate()) < 10 ? ('0' + D) : D;
+	DDD = (DDDD = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][this.getDay()]).substring(0, 3);
+	th = (D >= 10 && D <= 20) ? 'th' : ((dMod = D % 10) == 1) ? 'st' : (dMod == 2) ? 'nd' : (dMod == 3) ? 'rd' : 'th';
+	formatString = formatString.replace("#YYYY#", YYYY).replace("#YY#", YY).replace("#MMMM#", MMMM).replace("#MMM#", MMM).replace("#MM#", MM).replace("#M#", M).replace("#DDDD#", DDDD).replace("#DDD#", DDD).replace("#DD#", DD).replace("#D#", D).replace("#th#", th);
+	h = (hhh = this.getHours());
+	if (h == 0) h = 24;
+	if (h > 12) h -= 12;
+	hh = h < 10 ? ('0' + h) : h;
+	hhhh = hhh < 10 ? ('0' + hhh) : hhh;
+	AMPM = (ampm = hhh < 12 ? 'am' : 'pm').toUpperCase();
+	mm = (m = this.getMinutes()) < 10 ? ('0' + m) : m;
+	ss = (s = this.getSeconds()) < 10 ? ('0' + s) : s;
+	return formatString.replace("#hhhh#", hhhh).replace("#hhh#", hhh).replace("#hh#", hh).replace("#h#", h).replace("#mm#", mm).replace("#m#", m).replace("#ss#", ss).replace("#s#", s).replace("#ampm#", ampm).replace("#AMPM#", AMPM);
+};
+
+// The approximate conversions are:
+
+// Latitude: 1 deg = 110.574 km
+// Longitude: 1 deg = 111.320*cos(latitude) km
+</script>
+</body>
+</html>
